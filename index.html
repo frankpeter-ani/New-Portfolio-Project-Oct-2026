@@ -76,7 +76,7 @@
     <div style="opacity:{{ colOp }};transition:opacity .22s ease">
       <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#8f8f8f;padding-bottom:14px">Profile</div>
       <p style="margin:0 0 14px;max-width:34ch;font-size:clamp(12.5px,1.8vh,14.5px);line-height:1.5;color:#a3a3a3;text-wrap:pretty">Frankpeter is a multi-versatile designer working across product, UX and motion.</p>
-      <p style="margin:0;max-width:34ch;font-size:clamp(12.5px,1.8vh,14.5px);line-height:1.5;color:#a3a3a3;text-wrap:pretty">Currently open to full-time roles, previously design lead on <a href="#work" style="text-decoration:underline;text-underline-offset:3px">Tempo</a> and <a href="#work" style="text-decoration:underline;text-underline-offset:3px">Shadeform</a>.</p>
+      <p style="margin:0;max-width:34ch;font-size:clamp(12.5px,1.8vh,14.5px);line-height:1.5;color:#a3a3a3;text-wrap:pretty">Currently open to full-time roles, previously design lead on <a href="https://tempo.new/" target="_blank" rel="noopener" style="text-decoration:underline;text-underline-offset:3px">Tempo</a> and <a href="https://shadeform.com" target="_blank" rel="noopener" style="text-decoration:underline;text-underline-offset:3px">Shadeform</a>.</p>
     </div>
 
     <div style="opacity:{{ colOp }};transition:opacity .22s ease">
@@ -137,9 +137,9 @@
 class Component extends DCLogic {
   items = [
     ["Docwize","Document workflow — app UI","2026","3%","calc(-50% + 30px)","-7.5deg","docwize-card.png","Product Design, Design Systems","Rebuilding document review into a single, calm workflow for legal teams.","docwize-slanted.webp","light"],
-    ["Woz","AI mobile app builder — landing page","2025","27%","calc(-50% - 34px)","5deg","woz-card.webp","Web Design, Framer","Rebuilding the landing page for an AI that builds professional mobile apps from a prompt.","woz-hover-bg.webp","light"],
-    ["Shadeform","Components library — web app","2024","50%","calc(-50% + 40px)","-3.5deg","shadeform-card.webp","Design Systems, Product Strategy","A components library that let a four-person team ship like a twenty-person one."],
-    ["Tempo","AI app builder — brand film","2024","72%","calc(-50% - 20px)","9.5deg","tempo-card.avif","Motion, Art Direction","Art direction and a brand film for an AI app builder finding its voice."]
+    ["Woz","AI mobile app builder — landing page","2025","27%","calc(-50% - 34px)","5deg","woz-card.webp","Web Design, Framer","Revamping Woz to enable businesses to build professional mobile apps with AI.","woz-hover-bg.webp","light"],
+    ["React components","Components library — web app","2024","50%","calc(-50% + 40px)","-3.5deg","shadeform-card.webp","Design Systems, Product Strategy","A component library that lets Tempo users ship like a twenty-person squad."],
+    ["Tempo","Design-to-React IDE — core product","2024","72%","calc(-50% - 20px)","9.5deg","tempo-card.avif","Product Design, Design Engineering","Core product design, design system architecture, visual rebranding and design engineering for the design-to-React IDE."],
   ];
   loadShots = () => {
     const host = this.hostEl || document;
@@ -344,7 +344,7 @@ class Component extends DCLogic {
       capTop: (this.state.capTop || 0) + "px",
       capLeft: (this.state.capLeft || 0) + "px",
       dir: i % 2 ? "row-reverse" : "row",
-      imgOp: it[10] === "light" ? .52 : .8,
+      imgOp: (i === 2 || i === 3) ? 0 : (it[10] === "light" ? .52 : .8),
       scrim: it[10] === "light"
         ? "linear-gradient(180deg,rgba(15,15,15,.66) 0%,rgba(15,15,15,.44) 40%,rgba(15,15,15,.74) 100%)"
         : "linear-gradient(180deg,rgba(15,15,15,.56) 0%,rgba(15,15,15,.3) 44%,rgba(15,15,15,.66) 100%)",

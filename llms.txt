@@ -1,0 +1,12 @@
+# Frankpeter
+
+> Senior product designer for AI and SaaS products, working across product, UX, design systems and motion. Previously design lead on Tempo and Shadeform. Currently open to full-time roles.
+
+## Case studies
+
+- [Docwize](https://frankpeter.xyz/docwize): Rebuilding document review and approval for a SaaS document workflow product — inbox, review decisions, signature guard and design system.
+- [Woz](https://frankpeter.xyz/woz): Redesigning and building, in Framer, the landing page for Woz, an AI that builds professional mobile apps from a prompt. Live in 10 days.
+
+## Contact
+
+- Website: https://frankpeter.xyz/
