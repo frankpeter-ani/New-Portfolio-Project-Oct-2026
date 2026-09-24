@@ -23,7 +23,6 @@
 <meta name="twitter:description" content="How senior product designer Frankpeter redesigned and built the landing page for Woz, an AI that builds professional mobile apps from a prompt, in Framer in 10 days.">
 <meta name="twitter:image" content="https://frankpeter.xyz/og-image.jpg">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://frankpeter.xyz/#person","name":"Frankpeter","url":"https://frankpeter.xyz/","image":"https://frankpeter.xyz/icon-512.png","jobTitle":"Senior Product Designer","sameAs":["https://linkedin.com/in/frankpeter-ani","https://dribbble.com/frankpeter"],"description":"Senior product designer for AI and SaaS products, working across product, UX and motion. Previously design lead on Tempo and Shadeform.","knowsAbout":["Product design","AI product design","SaaS product design","UX design","Design systems","Motion design","Framer"]},{"@type":"CreativeWork","name":"Woz — AI app builder landing page case study","url":"https://frankpeter.xyz/woz","image":"https://frankpeter.xyz/woz-card.webp","creator":{"@id":"https://frankpeter.xyz/#person"},"about":["AI product design","Landing page design","Framer"]}]}</script>
-<script src="./reveal.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <script src="./support.js"></script>
 </head>
@@ -31,7 +30,7 @@
 <x-dc>
 <helmet>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
 <style>
   html{background:#0f0f0f}
   body{margin:0;background:#0f0f0f;color:#ffffff;font-family:Newsreader,Georgia,serif;-webkit-font-smoothing:antialiased}
@@ -40,12 +39,13 @@
   img,video{-webkit-user-drag:none;user-select:none;-webkit-touch-callout:none}
   ::selection{background:#ffffff;color:#0f0f0f}
 </style>
+<script src="./mobile-gate.js"></script>
 <script src="./cursor.js" defer=""></script>
 </helmet>
 <div data-wz-root="1" style="background:#0f0f0f;min-height:100vh">
 
 <section id="overview" data-sec="0" data-screen-label="00 Overview" style="position:relative;padding:clamp(56px,14vh,160px) clamp(22px,3vw,40px) 0;display:flex;flex-direction:column">
-  <a href="index.html" style="position:absolute;top:clamp(16px,2.4vh,40px);left:clamp(22px,3vw,40px);font-family:'IBM Plex Mono',monospace;font-size:10.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#ffffff">← Frankpeter</a>
+  <a href="index.html" style="position:absolute;top:clamp(16px,2.4vh,40px);left:clamp(22px,3vw,40px);display:flex;align-items:center;gap:10px;font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#ffffff"><span aria-hidden="true">←</span><img src="logo-avatar.png" alt="" width="24" height="24" draggable="false" style="width:24px;height:24px;border-radius:50%;object-fit:cover;display:block;flex:none;box-shadow:0 0 0 1px rgba(255,255,255,.14);pointer-events:none;user-select:none">Back home</a>
   <h1 style="margin:0 0 0 -.03em;font-weight:400;font-size:clamp(36px,5vw,76px);font-style:italic;line-height:1.02;letter-spacing:-.025em;max-width:20ch;text-wrap:balance">Rebuilding Woz's landing page to turn curious visitors into early users.</h1>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,170px),1fr));gap:24px 32px;margin-top:clamp(56px,11vh,120px)">
     <div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:18px;line-height:1.3;color:#ffffff">Project</span><span style="font-size:18px;line-height:1.3;color:#8f8f8f;text-wrap:pretty">Woz</span></div>
@@ -210,6 +210,7 @@ class Component extends DCLogic {
     addEventListener("scroll", this.onScroll, { passive: true });
     addEventListener("resize", this.onScroll);
     this.measure();
+    this.intro();
     const mq = document.querySelector("[data-wz-root] [data-marquee]");
     if (mq && !matchMedia("(prefers-reduced-motion: reduce)").matches)
       this.mqAnim = mq.animate([{ transform: "translateX(0)" }, { transform: "translateX(-50%)" }], { duration: 38000, iterations: Infinity });
@@ -218,6 +219,16 @@ class Component extends DCLogic {
     ["contextmenu","dragstart","copy"].forEach(ev => document.removeEventListener(ev, this.guard, true));
     removeEventListener("scroll", this.onScroll); removeEventListener("resize", this.onScroll);
     if (this.mqAnim) this.mqAnim.cancel();
+  }
+  intro(){
+    const root = document.querySelector("[data-wz-root]");
+    if (!root || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    root.style.height = "100vh"; root.style.overflow = "hidden"; root.style.transformOrigin = "50% 0";
+    const anim = root.animate([
+      { transform: "translateY(100vh) scale(.72)", borderRadius: "24px" },
+      { transform: "translateY(0) scale(1)", borderRadius: "0" }
+    ], { duration: 1100, easing: "cubic-bezier(.76,0,.24,1)" });
+    anim.onfinish = () => { root.style.height = ""; root.style.overflow = ""; this.measure(); };
   }
   measure(){
     const secs = document.querySelectorAll("[data-wz-root] [data-sec]");
