@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Frankpeter — Product Designer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics="">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+  body{margin:0;background:#efece4;color:#2e2b26;font-family:Newsreader,Georgia,serif;-webkit-font-smoothing:antialiased}
+  a{color:#2e2b26;text-decoration:none}
+  a:hover{color:#8a8377}
+  [data-theme="dark"] a{color:#fff}
+  [data-theme="dark"] a:hover{color:#8f8f8f}
+</style>
+<script src="./cursor.js" defer=""></script>
+</helmet>
+<main data-theme="dark" style="position: relative; display: flex; flex-direction: column; height: 100dvh; min-height: 440px; box-sizing: border-box; padding: clamp(16px,2.4vh,40px) clamp(22px,3vw,40px); overflow: visible; background: linear-gradient(rgba(15,15,15,.84), rgba(15,15,15,.84)), url(&quot;./layer-z3-remove-background-mu5b8e1z-cox9.png&quot;) top right / contain no-repeat, #0f0f0f; color: #ffffff">
+  <canvas data-fx-canvas="1" style="position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none"></canvas>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,160px),1fr));gap:clamp(12px,2.2vw,32px);align-items:start;position:relative;z-index:55">
+
+    <div style="display:grid;gap:clamp(14px,3.2vh,46px);align-content:start">
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#ffffff">✳ Frankpeter</div>
+        <div style="padding-top:clamp(10px,1.8vh,18px);font-family:'IBM Plex Mono',monospace;font-size:10.5px;line-height:1.6;letter-spacing:.12em;text-transform:uppercase;color:#8f8f8f">Product, UX<br>&amp; INTERACTION<br>designer</div>
+      </div>
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#8f8f8f">Contact</div>
+      </div>
+    </div>
+
+    <div style="display:grid;gap:clamp(14px,3.2vh,46px);align-content:start">
+      <nav style="display:grid;gap:6px;font-family:Newsreader,Georgia,serif;font-size:clamp(15px,2.2vh,20px);line-height:1.3;color:#ffffff">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#8f8f8f;padding-bottom:10px">Menu</div>
+        <a href="#work" style="font-style: italic; font-weight: 500">Work</a>
+        <a href="#about" style="font-style: italic">About</a>
+        <a href="#craft" style="font-style: italic">Craft</a>
+        <a href="#writing" style="font-style: italic">Studio</a>
+      </nav>
+      <div style="display:grid;gap:9px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#a3a3a3">
+        <a href="#">LinkedIn</a>
+        <a href="#">X / Twitter</a>
+        <a href="#">Résumé</a>
+        <a href="mailto:hello@frankpeter.xyz">Email</a>
+      </div>
+    </div>
+
+    <div style="opacity:{{ colOp }};transition:opacity .22s ease">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#8f8f8f;padding-bottom:14px">Profile</div>
+      <p style="margin:0 0 14px;max-width:34ch;font-size:clamp(12.5px,1.8vh,14.5px);line-height:1.5;color:#a3a3a3;text-wrap:pretty">Frankpeter is a multi-versatile designer working across product, UX and motion.</p>
+      <p style="margin:0;max-width:34ch;font-size:clamp(12.5px,1.8vh,14.5px);line-height:1.5;color:#a3a3a3;text-wrap:pretty">Currently open to full-time roles, previously design lead on <a href="#work" style="text-decoration:underline;text-underline-offset:3px">Tempo</a> and <a href="#work" style="text-decoration:underline;text-underline-offset:3px">Shadeform</a>.</p>
+    </div>
+
+    <div style="opacity:{{ colOp }};transition:opacity .22s ease">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#8f8f8f;padding-bottom:14px">Now</div>
+      <p style="margin:0;max-width:34ch;font-size:clamp(12.5px,1.8vh,14.5px);line-height:1.5;color:#a3a3a3;text-wrap:pretty">I care about ownership: the small decisions that scale — systematic details, microinteractions, and the moments that make a product feel finished.</p>
+    </div>
+  </div>
+
+  
+
+  <sc-if value="{{ showWorks }}" hint-placeholder-val="{{ true }}">
+    <a href="#work" style="position: absolute; right: 1%; bottom: 12%; z-index: 40; width: 208px; padding: clamp(12px,1.4vw,18px); box-sizing: border-box; background: #171717; box-shadow: 0 22px 50px rgba(0,0,0,.55), 0 0 0 1px #262626; transform: rotate(-2.5deg); display: grid; gap: 8px; height: 164px">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#8f8f8f">View all →</div>
+      <div style="color: #ffffff; font-family: Newsreader,Georgia,serif; font-weight: 400; font-size: clamp(34px,4.4vw,60px); line-height: .9; letter-spacing: -.02em; font-style: italic">Works</div>
+      <p style="margin:0;max-width:26ch;font-family:Newsreader,Georgia,serif;font-size:13px;line-height:1.35;color:#8f8f8f">An ever-growing collection of work that blends disciplines.</p>
+    </a>
+  </sc-if>
+
+  <sc-for list="{{ cards }}" as="c" hint-placeholder-count="4">
+    <div style="position:absolute;inset:0;z-index:50;pointer-events:none;overflow:hidden;background:#0f0f0f;contain:strict;transform:translateZ(0);backface-visibility:hidden;opacity:{{ c.ov }};visibility:{{ c.vis }};transition:opacity .14s ease,visibility .14s">
+      <img loading="lazy" decoding="async" alt="{{ c.name }} background" data-src="{{ c.bg }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;opacity:{{ c.imgOp }}">
+      <div style="position:absolute;inset:0;background:{{ c.scrim }}"></div>
+      <div style="position:absolute;inset:0;display:grid;grid-template-rows:auto 1fr auto;padding:clamp(16px,2.4vh,40px) clamp(22px,3vw,40px);box-sizing:border-box">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:24px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#ffffff">
+          <div></div>
+          <div style="color:#d6d2c9">{{ c.year }}</div>
+        </div>
+      </div>
+      <div style="position:absolute;right:clamp(22px,3vw,40px);bottom:calc(clamp(16px,2.4vh,40px) + 10px);font-family:'IBM Plex Mono',monospace;font-size:10.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#d6d2c9;text-align:right">{{ c.tags }}</div>
+      <div data-cap="{{ c.i }}" style="position:absolute;left:{{ c.capLeft }};top:{{ c.capTop }};display:flex;flex-direction:column;align-items:flex-start;gap:5px;width:23%;min-width:130px;text-align:left">
+        <h2 style="margin:0;font-family:Newsreader,Georgia,serif;font-weight:400;font-style:italic;font-size:clamp(21px,2.9vh,27px);line-height:1.05;letter-spacing:-.01em;color:#ffffff">{{ c.name }}</h2>
+        <p style="margin:0;max-width:30ch;font-family:Newsreader,Georgia,serif;font-size:clamp(12.5px,1.8vh,14.5px);line-height:1.5;color:#e8e5de;text-wrap:pretty">{{ c.desc }}</p>
+      </div>
+    </div>
+  </sc-for>
+
+  <div data-stage="1" style="position: relative; z-index: 60; flex: 1; min-height: clamp(150px,22vh,330px); overflow: visible; margin: clamp(8px,1.6vh,20px) 0 0; display: flex; flex-direction: row-reverse; justify-content: space-evenly; align-items: flex-end">
+    <sc-for list="{{ cards }}" as="c" hint-placeholder-count="4">
+      <a href="{{ c.href }}" onMouseEnter="{{ enter }}" onMouseLeave="{{ cardLeave }}" data-i="{{ c.i }}" style="position:absolute;left:{{ c.left }};top:50%;width:23%;min-width:130px;padding:2px;box-sizing:border-box;border-radius:10px;background:#ffffff;box-shadow:0 18px 44px rgba(0,0,0,.6);transform:translateY({{ c.top }}) rotate({{ c.rot }});z-index:{{ c.z }};opacity:{{ c.cardOp }};transition:opacity .22s ease,transform .55s cubic-bezier(.22,.7,.2,1)">
+        <div style="position:relative;aspect-ratio:16/10;border-radius:9px;overflow:hidden;background:#ffffff">
+          <img loading="lazy" decoding="async" alt="{{ c.shot }}" data-src="{{ c.img }}" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:9px;transform:{{ c.imgScale }}">
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(15,15,15,.62);opacity:{{ c.soonOp }};visibility:{{ c.soonVis }};transition:opacity .16s ease,visibility .16s">
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#ffffff;border:1px solid rgba(255,255,255,.5);border-radius:999px;padding:6px 12px;white-space:nowrap">Coming soon</span>
+          </div>
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(15,15,15,.28);opacity:{{ c.viewOp }};visibility:{{ c.viewVis }};transition:opacity .16s ease,visibility .16s">
+            <span style="display:flex;align-items:center;gap:8px;font-family:'IBM Plex Mono',monospace;font-size:9.5px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#0f0f0f;background:#ffffff;border-radius:999px;padding:6px 8px 6px 12px;white-space:nowrap;box-shadow:0 6px 18px rgba(0,0,0,.25)">View case study<span style="display:flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;background:#0f0f0f;color:#ffffff;font-size:11px;letter-spacing:0">↗</span></span>
+          </div>
+        </div>
+      </a>
+    </sc-for>
+  </div><div style="position:relative;z-index:10;flex:none;background:transparent;display:flex;align-items:flex-end;justify-content:space-between;gap:clamp(20px,4vw,60px);flex-wrap:wrap;padding-top:clamp(10px,2vw,24px)">
+    <h1 style="margin: 0; flex: 1 1 auto; max-width: 100%; white-space: nowrap; font-family: Newsreader,Georgia,serif; font-weight: 400; font-size: clamp(17px,min(2.1vw,3.2vh),27px); line-height: 1.25; letter-spacing: -.02em; color: #ffffff; font-style: italic">Product success is my <i style="font-style: italic">thing</i>. People are the point.</h1>
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#8f8f8f;padding-bottom:10px">Scroll ↓ for work</div>
+  </div>
+</main>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:900},&quot;showWorksCard&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Layout&quot;}}">
+class Component extends DCLogic {
+  items = [
+    ["Docwize","Document workflow — app UI","2026","3%","calc(-50% + 30px)","-7.5deg","assets/docwize/card.png","Product Design, Design Systems","Rebuilding document review into a single, calm workflow for legal teams.","assets/docwize/slanted.webp","light"],
+    ["Woz","AI mobile app builder — landing page","2025","27%","calc(-50% - 34px)","5deg","assets/woz/card.webp","Web Design, Framer","Rebuilding the landing page for an AI that builds professional mobile apps from a prompt.","assets/woz/hover-bg.webp","light"],
+    ["Shadeform","Components library — web app","2024","50%","calc(-50% + 40px)","-3.5deg","assets/shadeform/card.webp","Design Systems, Product Strategy","A components library that let a four-person team ship like a twenty-person one."],
+    ["Tempo","AI app builder — brand film","2024","72%","calc(-50% - 20px)","9.5deg","assets/tempo/card.avif","Motion, Art Direction","Art direction and a brand film for an AI app builder finding its voice."]
+  ];
+  loadShots = () => {
+    const host = this.hostEl || document;
+    host.querySelectorAll("img[data-src]").forEach(img => {
+      if (img.getAttribute("src") !== img.dataset.src) img.src = img.dataset.src;
+    });
+  };
+  startEffect(){
+    if (this.fxOn) return;
+    var host = document.querySelector('[data-theme="dark"]');
+    var c = host && host.querySelector('[data-fx-canvas]');
+    if (!host || !c) return;
+    var self = this, trail = [], bits = [], off = document.createElement('canvas');
+    var img = new Image();
+    img.src = './layer-z3-remove-background-mu5b8e1z-cox9.png';
+    var dpr = Math.min(1.5, window.devicePixelRatio || 1), odpr = dpr * .5;
+    function size(){
+      var w = c.clientWidth, h = c.clientHeight;
+      if (!w || !h) return;
+      c.width = Math.round(w*dpr); c.height = Math.round(h*dpr);
+      off.width = Math.round(w*odpr); off.height = Math.round(h*odpr);
+    }
+    this.fxOn = true;
+    size();
+    window.addEventListener('resize', function(){ self.rectCache = null; size(); });
+    window.addEventListener('scroll', function(){ self.rectCache = null; }, {passive:true});
+    host.addEventListener('pointermove', function(e){
+      var tn = performance.now();
+      if (tn - (self.lastMove||0) < 14) return;
+      self.lastMove = tn;
+      if (self.state && self.state.active !== null) return;
+      var r = self.rectCache || (self.rectCache = c.getBoundingClientRect());
+      var x = e.clientX - r.left, y = e.clientY - r.top;
+      var last = trail[trail.length-1];
+      var sp = last ? Math.hypot(x-last.x, y-last.y) : 0;
+      self.px = x; self.py = y;
+      if (last){ self.pvx = (self.pvx||0)*.6 + (x-last.x)*.9; self.pvy = (self.pvy||0)*.6 + (y-last.y)*.9; }
+      trail.push({x:x, y:y, t:performance.now()});
+      if (trail.length > 18) trail.shift();
+      var n = Math.min(4, 1 + Math.round(sp/14));
+      for (var k=0;k<n;k++) bits.push({x:x,y:y,vx:(Math.random()-.5)*1.7,vy:(Math.random()-.5)*1.7-.35,r:.7+Math.random()*1.9,life:1,decay:.007+Math.random()*.012});
+      if (bits.length > 160) bits.splice(0, bits.length-160);
+      if (!c.width) size();
+    });
+    var loop = function(){
+      self.raf = requestAnimationFrame(loop);
+      var w = c.clientWidth, h = c.clientHeight;
+      if (!w || !h) return;
+      if (self.state && self.state.active !== null){
+        if (!self.paused){ var gc = c.getContext('2d'); gc.setTransform(1,0,0,1,0,0); gc.clearRect(0,0,c.width,c.height); trail.length = 0; bits.length = 0; self.paused = true; }
+        return;
+      }
+      self.paused = false;
+      if (self.fxHold && performance.now() < self.fxHold){ trail.length = 0; bits.length = 0; return; }
+      if (c.width !== Math.round(w*dpr)) size();
+      var g = c.getContext('2d', {alpha:true});
+      g.setTransform(dpr,0,0,dpr,0,0);
+      g.clearRect(0,0,w,h);
+      var now = performance.now();
+      if (!self.amb){
+        self.amb = [];
+        for (var q=0;q<46;q++) self.amb.push({x:Math.random(),y:Math.random(),r:.5+Math.random()*1.1,sp:.012+Math.random()*.03,ph:Math.random()*7,a:.05+Math.random()*.09});
+      }
+      for (var q2=0;q2<self.amb.length;q2++){
+        var m = self.amb[q2];
+        m.y -= m.sp/h*10; if (m.y < -.02) { m.y = 1.02; m.x = Math.random(); }
+        var mx = (m.x*w) + Math.sin(now/2600 + m.ph)*9;
+        g.globalAlpha = m.a;
+        g.fillStyle = '#ffffff';
+        g.beginPath(); g.arc(mx, m.y*h, m.r, 0, 7); g.fill();
+      }
+      g.globalAlpha = 1;
+      while (trail.length && now - trail[0].t > 620) trail.shift();
+      if (trail.length && img.complete && img.naturalWidth){
+        var o = off.getContext('2d');
+        o.setTransform(odpr,0,0,odpr,0,0);
+        o.clearRect(0,0,w,h);
+        o.filter = 'blur(9px)';
+        o.fillStyle = '#fff';
+        for (var i=0;i<trail.length;i++){
+          var p = trail[i], age = (now-p.t)/620;
+          var rad = (78 - age*44) * (1 - i/(trail.length*2.6)*.25);
+          if (rad <= 0) continue;
+          o.globalAlpha = (1-age)*.95;
+          o.beginPath(); o.arc(p.x, p.y, rad, 0, 7); o.fill();
+        }
+        o.filter = 'none'; o.globalAlpha = 1;
+        o.globalCompositeOperation = 'source-in';
+        var sc = Math.min(w/img.naturalWidth, h/img.naturalHeight);
+        var iw = img.naturalWidth*sc, ih = img.naturalHeight*sc;
+        o.drawImage(img, w-iw, 0, iw, ih);
+        o.globalCompositeOperation = 'source-atop';
+        o.fillStyle = 'rgba(255,255,255,.1)';
+        o.fillRect(0,0,w,h);
+        o.globalCompositeOperation = 'source-over';
+        g.globalAlpha = .96;
+        g.drawImage(off, 0, 0, w, h);
+        g.globalAlpha = 1;
+      }
+      for (var j=bits.length-1;j>=0;j--){
+        var t2 = bits[j];
+        t2.x += t2.vx; t2.y += t2.vy; t2.vy += .012; t2.life -= t2.decay;
+        if (t2.life <= 0){ bits.splice(j,1); continue; }
+        g.globalAlpha = Math.min(1, t2.life*1.05);
+        g.fillStyle = '#f5f5f5';
+        g.shadowColor = 'rgba(255,255,255,.55)'; g.shadowBlur = 6;
+        g.beginPath(); g.arc(t2.x, t2.y, t2.r, 0, 7); g.fill();
+      }
+      g.shadowBlur = 0;
+      g.globalAlpha = 1;
+    };
+    this.raf = requestAnimationFrame(loop);
+  }
+  watchStage(){
+    var self = this;
+    document.addEventListener('pointermove', function(e){
+      if (self.state.active === null) return;
+      var st = document.querySelector('[data-stage]');
+      if (!st) return;
+      var r = st.getBoundingClientRect(), pad = 4;
+      if (e.clientX < r.left-pad || e.clientX > r.right+pad || e.clientY < r.top-pad || e.clientY > r.bottom+pad) self.leave();
+    }, {passive:true});
+  }
+  componentDidMount(){
+    this.watchStage();
+    this.loadShots();
+    this.startEffect();
+    setTimeout(this.startEffect.bind(this), 200);
+    requestAnimationFrame(this.loadShots);
+    setTimeout(this.loadShots, 150);
+  }
+  componentDidUpdate(){ this.loadShots(); }
+  state = { active: null, capTop: 0, capLeft: 0 };
+  enter = (e) => {
+    clearTimeout(this.leaveT); this.leaveT = null;
+    const el = e.currentTarget;
+    if (!el.dataset.rot){ el.dataset.rot = el.style.transform; el.dataset.z = el.style.zIndex; }
+    const idx = parseInt(el.dataset.i, 10);
+    const base = (el.dataset.rot || "").replace(/rotate\([^)]*\)/, "rotate(0deg)");
+    const hoverT = (L) => base + " translateY(-" + Math.round(L) + "px) scale(1.04)";
+    const root = (document.querySelector('[data-stage]') || el).parentElement;
+    const rr = root ? root.getBoundingClientRect() : { top: 0, left: 0, height: innerHeight };
+    const rh = rr.height || innerHeight;
+    const cap = document.querySelector('[data-cap="' + idx + '"]');
+    const blockH = (cap ? cap.getBoundingClientRect().height : 0) || 84;
+
+    const trans = el.style.transition;
+    el.style.transition = "none";
+    el.style.transform = hoverT(14);
+    void el.offsetWidth;
+    let er = el.getBoundingClientRect();
+    let lift = 14 + Math.max(0, (er.bottom - rr.top) + 32 + blockH + 12 - rh);
+    if (lift > 14){
+      el.style.transform = hoverT(lift);
+      void el.offsetWidth;
+      er = el.getBoundingClientRect();
+    }
+    const capLeft = Math.round(er.left - rr.left);
+    const capTop = Math.round(Math.min(er.bottom - rr.top + 32, rh - blockH - 12));
+    el.style.transform = el.dataset.rot || "";
+    void el.offsetWidth;
+    el.style.transition = trans;
+    el.style.transform = hoverT(lift);
+    el.style.boxShadow = "0 40px 80px rgba(0,0,0,.6)";
+    el.style.zIndex = 30;
+    this.hovered = el;
+    this.setState({ active: idx, capTop: capTop, capLeft: capLeft });
+  };
+  reset(){
+    const el = this.hovered;
+    if (!el) return;
+    el.style.transform = el.dataset.rot || "none";
+    el.style.boxShadow = "0 18px 44px rgba(0,0,0,.6)";
+    el.style.zIndex = el.dataset.z || "";
+    this.hovered = null;
+  }
+  cardLeave = () => {
+    this.reset();
+    clearTimeout(this.leaveT);
+    this.leaveT = setTimeout(() => { if (!this.hovered) this.leave(); }, 40);
+  };
+  leave = () => { this.reset(); this.fxHold = performance.now() + 260; if (this.state.active !== null) this.setState({ active: null }); };
+  renderVals(){
+    const a = this.state.active;
+    const cards = this.items.map((it,i) => ({
+      i, name: it[0], shot: it[1], year: it[2], left: it[3], top: it[4], rot: it[5], img: it[6],
+      tags: it[7], desc: it[8], bg: it[9] || it[6],
+      href: i === 0 ? "docwize.html" : (i === 1 ? "woz.html" : "#work"),
+      imgScale: i === 0 ? "scale(1.28)" : (i === 1 ? "scale(1.14)" : "none"),
+      capTop: (this.state.capTop || 0) + "px",
+      capLeft: (this.state.capLeft || 0) + "px",
+      dir: i % 2 ? "row-reverse" : "row",
+      imgOp: it[10] === "light" ? .52 : .8,
+      scrim: it[10] === "light"
+        ? "linear-gradient(180deg,rgba(15,15,15,.66) 0%,rgba(15,15,15,.44) 40%,rgba(15,15,15,.74) 100%)"
+        : "linear-gradient(180deg,rgba(15,15,15,.56) 0%,rgba(15,15,15,.3) 44%,rgba(15,15,15,.66) 100%)",
+      z: 5 + i,
+      soonOp: (a === i && (i === 2 || i === 3)) ? 1 : 0,
+      soonVis: (a === i && (i === 2 || i === 3)) ? "visible" : "hidden",
+      viewOp: (a === i && i < 2) ? 1 : 0,
+      viewVis: (a === i && i < 2) ? "visible" : "hidden",
+      ov: a === i ? 1 : 0,
+      vis: a === i ? "visible" : "hidden",
+      h2Left: i === 0 ? "50%" : "clamp(22px,3vw,40px)",
+      h2Shift: "none",
+      txtTop: ["50%", "62%", "40%", "58%"][i],
+      txtLeft: ["50%", "56%", "70%", "5%"][i],
+      txtRight: ["clamp(22px,3vw,40px)", "clamp(22px,3vw,40px)", "clamp(22px,3vw,40px)", "33%"][i],
+      
+      cardOp: (a === null || a === i) ? 1 : 0
+    }));
+    return {
+      capRef: this.capRef, cards, colOp: 1, enter: this.enter, cardLeave: this.cardLeave, leave: this.leave, showWorks: this.props.showWorksCard === true };
+  }
+}
+</script>
+</body>
+</html>
