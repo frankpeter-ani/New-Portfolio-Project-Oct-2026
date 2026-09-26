@@ -35,4 +35,7 @@ function apply(){
 apply();
 if (!document.body) document.addEventListener('DOMContentLoaded', apply);
 (mq.addEventListener ? mq.addEventListener('change', apply) : mq.addListener(apply));
+addEventListener('resize', apply, { passive: true });
+addEventListener('pageshow', apply);
+addEventListener('load', apply);
 })();

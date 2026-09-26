@@ -22,7 +22,7 @@
 <meta name="twitter:title" content="Woz case study — AI app builder landing page | Frankpeter">
 <meta name="twitter:description" content="How senior product designer Frankpeter redesigned and built the landing page for Woz, an AI that builds professional mobile apps from a prompt, in Framer in 10 days.">
 <meta name="twitter:image" content="https://frankpeter.xyz/og-image.jpg">
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://frankpeter.xyz/#person","name":"Frankpeter","url":"https://frankpeter.xyz/","image":"https://frankpeter.xyz/icon-512.png","jobTitle":"Senior Product Designer","sameAs":["https://linkedin.com/in/frankpeter-ani","https://dribbble.com/frankpeter"],"description":"Senior product designer for AI and SaaS products, working across product, UX and motion. Previously design lead on Tempo and Shadeform.","knowsAbout":["Product design","AI product design","SaaS product design","UX design","Design systems","Motion design","Framer"]},{"@type":"CreativeWork","name":"Woz — AI app builder landing page case study","url":"https://frankpeter.xyz/woz","image":"https://frankpeter.xyz/woz-card.webp","creator":{"@id":"https://frankpeter.xyz/#person"},"about":["AI product design","Landing page design","Framer"]}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://frankpeter.xyz/#person","name":"Frankpeter","url":"https://frankpeter.xyz/","image":"https://frankpeter.xyz/icon-512.png","jobTitle":"Senior Product Designer","address":{"@type":"PostalAddress","addressLocality":"Enugu","addressCountry":"NG"},"homeLocation":{"@type":"Place","name":"Enugu, Nigeria"},"sameAs":["https://linkedin.com/in/frankpeter-ani","https://dribbble.com/frankpeter-ani"],"description":"Senior product designer for AI and SaaS products, working across product, UX and motion. Previously design lead on Tempo and Shadeform.","knowsAbout":["Product design","AI product design","SaaS product design","UX design","Design systems","Motion design","Framer"]},{"@type":"CreativeWork","name":"Woz — AI app builder landing page case study","url":"https://frankpeter.xyz/woz","image":"https://frankpeter.xyz/woz-card.webp","creator":{"@id":"https://frankpeter.xyz/#person"},"about":["AI product design","Landing page design","Framer"]}]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <script src="./support.js"></script>
 </head>
@@ -39,8 +39,10 @@
   img,video{-webkit-user-drag:none;user-select:none;-webkit-touch-callout:none}
   ::selection{background:#ffffff;color:#0f0f0f}
 </style>
+<!-- HIDDEN: Light mode <script src="./theme.js"></script> -->
 <script src="./mobile-gate.js"></script>
 <script src="./cursor.js" defer=""></script>
+<script src="./sound.js" defer=""></script>
 </helmet>
 <div data-wz-root="1" style="background:#0f0f0f;min-height:100vh">
 
@@ -76,7 +78,7 @@
   <div style="padding:0 clamp(22px,3vw,40px)">
 
     <section id="challenge" data-sec="1" data-screen-label="01 Challenge" style="padding:clamp(96px,16vh,200px) 0;padding-left:max(0px,calc(18vw - 40px));display:flex;flex-direction:column">
-      <div style="position:sticky;top:48px;z-index:6;background:#0f0f0f;padding:14px 0;margin:-14px 0 -14px calc(-1 * max(0px, calc(18vw - 40px)));display:flex;align-items:baseline;gap:16px"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:500;letter-spacing:.14em;color:#ffffff">01</span><h2 style="margin:0;font-weight:400;font-size:clamp(28px,3.4vw,44px);line-height:1.05;letter-spacing:-.02em">The challenge</h2></div>
+      <div style="position:sticky;top:48px;z-index:6;background:#0f0f0f;box-shadow:0 0 0 100vmax #0f0f0f;clip-path:inset(0 -100vmax);padding:14px 0;margin:-14px 0 -14px calc(-1 * max(0px, calc(18vw - 40px)));display:flex;align-items:baseline;gap:16px"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:500;letter-spacing:.14em;color:#ffffff">01</span><h2 style="margin:0;font-weight:400;font-size:clamp(28px,3.4vw,44px);line-height:1.05;letter-spacing:-.02em">The challenge</h2></div>
       <p style="margin:clamp(32px,6vh,64px) 0 0;max-width:26ch;font-size:clamp(28px,3.6vw,56px);line-height:1.18;letter-spacing:-.015em;color:#ffffff;text-wrap:pretty">Five seconds to explain an AI that builds apps.</p>
       <p style="margin:clamp(32px,5vh,56px) 0 0;max-width:62ch;font-size:18px;line-height:1.55;color:#a3a3a3;text-wrap:pretty">Woz needed a landing page that explained the product plainly, caught attention fast, and converted curious visitors into early users or leads. The old page did none of that clearly enough to carry a pitch.</p>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:0 32px;margin-top:clamp(40px,7vh,72px);max-width:880px">
@@ -87,7 +89,7 @@
     </section>
 
     <section id="brief" data-sec="2" data-screen-label="02 Brief" style="padding:clamp(96px,16vh,200px) 0;display:flex;flex-direction:column;gap:clamp(28px,4vh,44px)">
-      <div style="position:sticky;top:48px;z-index:6;background:#0f0f0f;padding:14px 0;margin:-14px 0;display:flex;align-items:baseline;gap:16px"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:500;letter-spacing:.14em;color:#ffffff">02</span><h2 style="margin:0;font-weight:400;font-size:clamp(28px,3.4vw,44px);line-height:1.05;letter-spacing:-.02em">The brief</h2><span style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#8f8f8f">Week 1</span></div>
+      <div style="position:sticky;top:48px;z-index:6;background:#0f0f0f;box-shadow:0 0 0 100vmax #0f0f0f;clip-path:inset(0 -100vmax);padding:14px 0;margin:-14px 0;display:flex;align-items:baseline;gap:16px"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:500;letter-spacing:.14em;color:#ffffff">02</span><h2 style="margin:0;font-weight:400;font-size:clamp(28px,3.4vw,44px);line-height:1.05;letter-spacing:-.02em">The brief</h2><span style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#8f8f8f">Week 1</span></div>
       <p style="margin:0;max-width:62ch;font-size:18px;line-height:1.55;color:#a3a3a3;text-wrap:pretty">I started with the founder's vision, gathered through async messages and Looms. Before drawing anything, I asked two direct questions. Every layout that followed answered them.</p>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:14px">
         <div style="background:linear-gradient(180deg,#1b1b1b 0%,#141414 100%);border:1px solid rgba(255,255,255,.08);border-radius:16px;box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 24px 48px -24px rgba(0,0,0,.6);padding:clamp(24px,3vw,40px);display:flex;flex-direction:column;gap:clamp(32px,6vh,72px)"><span style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#8f8f8f">Question 01</span><p style="margin:0;font-size:clamp(24px,2.4vw,34px);line-height:1.2;letter-spacing:-.01em;font-style:italic;text-wrap:pretty">What's the single most important thing a user should know after 5 seconds?</p></div>
@@ -96,7 +98,7 @@
     </section>
 
     <section id="explorations" data-sec="3" data-screen-label="03 Explorations" style="padding:clamp(96px,16vh,200px) 0;display:flex;flex-direction:column;gap:clamp(36px,6vh,64px)">
-      <div style="position:sticky;top:48px;z-index:6;background:#0f0f0f;padding:14px 0;margin:-14px 0;display:flex;align-items:baseline;gap:16px"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:500;letter-spacing:.14em;color:#ffffff">03</span><h2 style="margin:0;font-weight:400;font-size:clamp(28px,3.4vw,44px);line-height:1.05;letter-spacing:-.02em">The explorations</h2></div>
+      <div style="position:sticky;top:48px;z-index:6;background:#0f0f0f;box-shadow:0 0 0 100vmax #0f0f0f;clip-path:inset(0 -100vmax);padding:14px 0;margin:-14px 0;display:flex;align-items:baseline;gap:16px"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:500;letter-spacing:.14em;color:#ffffff">03</span><h2 style="margin:0;font-weight:400;font-size:clamp(28px,3.4vw,44px);line-height:1.05;letter-spacing:-.02em">The explorations</h2></div>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:24px 32px">
         <div style="display:flex;flex-direction:column;gap:10px;padding-top:14px;border-top:1px solid rgba(255,255,255,.14)"><span style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;color:#8f8f8f">A</span><p style="margin:0;font-size:18px;line-height:1.5;text-wrap:pretty">A bold hero with a looping video of prompt-to-app generation.</p></div>
         <div style="display:flex;flex-direction:column;gap:10px;padding-top:14px;border-top:1px solid rgba(255,255,255,.14)"><span style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;color:#8f8f8f">B</span><p style="margin:0;font-size:18px;line-height:1.5;text-wrap:pretty">A simple value-prop stack with icons and scroll-in animations.</p></div>
@@ -113,14 +115,14 @@
     </section>
 
     <section id="direction" data-sec="4" data-screen-label="04 Direction" style="padding:clamp(96px,16vh,200px) 0;display:flex;flex-direction:column;gap:clamp(36px,6vh,64px)">
-      <div style="position:sticky;top:48px;z-index:6;background:#0f0f0f;padding:14px 0;margin:-14px 0;display:flex;align-items:baseline;gap:16px"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:500;letter-spacing:.14em;color:#ffffff">04</span><h2 style="margin:0;font-weight:400;font-size:clamp(28px,3.4vw,44px);line-height:1.05;letter-spacing:-.02em">The direction</h2></div>
+      <div style="position:sticky;top:48px;z-index:6;background:#0f0f0f;box-shadow:0 0 0 100vmax #0f0f0f;clip-path:inset(0 -100vmax);padding:14px 0;margin:-14px 0;display:flex;align-items:baseline;gap:16px"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:500;letter-spacing:.14em;color:#ffffff">04</span><h2 style="margin:0;font-weight:400;font-size:clamp(28px,3.4vw,44px);line-height:1.05;letter-spacing:-.02em">The direction</h2></div>
       <div style="padding-left:max(0px, calc(18vw - 40px))"><p style="margin:0;max-width:26ch;font-size:clamp(28px,3.6vw,56px);line-height:1.12;letter-spacing:-.02em;color:#ffffff;text-wrap:balance">Clarity over hype. Show the apps, not the AI.</p></div>
       <p style="margin:0;max-width:62ch;font-size:18px;line-height:1.55;color:#a3a3a3;text-wrap:pretty">We landed on a simple, clean page built around the mobile apps themselves. Real snapshots of what Woz can build convert better than any explanation of how it works.</p>
       <figure style="margin:0;display:flex;flex-direction:column;gap:12px"><div style="position:relative;border-radius:9px;overflow:hidden;background:#171717"><img loading="lazy" decoding="async" src="woz-final.webp" alt="Clean snapshots of mobile apps built with Woz" draggable="false" style="display:block;width:100%;height:auto;pointer-events:none;user-select:none"><div data-guard="1" style="position:absolute;inset:0"></div></div><figcaption style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#8f8f8f">Approved hero · app snapshots</figcaption></figure>
     </section>
 
     <section id="refinement" data-sec="5" data-screen-label="05 Refinement" style="padding:clamp(96px,16vh,200px) 0;display:flex;flex-direction:column;gap:clamp(36px,6vh,64px)">
-      <div style="position:sticky;top:48px;z-index:6;background:#0f0f0f;padding:14px 0;margin:-14px 0;display:flex;align-items:baseline;gap:16px"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:500;letter-spacing:.14em;color:#ffffff">05</span><h2 style="margin:0;font-weight:400;font-size:clamp(28px,3.4vw,44px);line-height:1.05;letter-spacing:-.02em">The refinement</h2><span style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#8f8f8f">Week 2</span></div>
+      <div style="position:sticky;top:48px;z-index:6;background:#0f0f0f;box-shadow:0 0 0 100vmax #0f0f0f;clip-path:inset(0 -100vmax);padding:14px 0;margin:-14px 0;display:flex;align-items:baseline;gap:16px"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:500;letter-spacing:.14em;color:#ffffff">05</span><h2 style="margin:0;font-weight:400;font-size:clamp(28px,3.4vw,44px);line-height:1.05;letter-spacing:-.02em">The refinement</h2><span style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#8f8f8f">Week 2</span></div>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:clamp(32px,5vw,72px)">
         <div style="display:flex;flex-direction:column;gap:18px">
           <span style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#8f8f8f">What we tuned</span>
@@ -150,7 +152,7 @@
     </section>
 
     <section id="build" data-sec="6" data-screen-label="06 Build" style="padding:clamp(96px,16vh,200px) 0;display:flex;flex-direction:column;gap:clamp(36px,6vh,64px)">
-      <div style="position:sticky;top:48px;z-index:6;background:#0f0f0f;padding:14px 0;margin:-14px 0;display:flex;align-items:baseline;gap:16px"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:500;letter-spacing:.14em;color:#ffffff">06</span><h2 style="margin:0;font-weight:400;font-size:clamp(28px,3.4vw,44px);line-height:1.05;letter-spacing:-.02em">The build</h2></div>
+      <div style="position:sticky;top:48px;z-index:6;background:#0f0f0f;box-shadow:0 0 0 100vmax #0f0f0f;clip-path:inset(0 -100vmax);padding:14px 0;margin:-14px 0;display:flex;align-items:baseline;gap:16px"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:500;letter-spacing:.14em;color:#ffffff">06</span><h2 style="margin:0;font-weight:400;font-size:clamp(28px,3.4vw,44px);line-height:1.05;letter-spacing:-.02em">The build</h2></div>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:clamp(32px,5vw,72px)">
         <div style="display:flex;flex-direction:column;gap:18px">
           <p style="margin:0;max-width:24ch;font-size:clamp(24px,2.6vw,36px);line-height:1.25;letter-spacing:-.01em;text-wrap:pretty">After approval, I rebuilt the entire page myself in Framer.</p>
@@ -168,7 +170,7 @@
     </section>
 
     <section id="impact" data-sec="7" data-screen-label="07 Impact" style="padding:clamp(96px,16vh,200px) 0 clamp(80px,14vh,160px);display:flex;flex-direction:column;gap:clamp(36px,6vh,64px)">
-      <div style="position:sticky;top:48px;z-index:6;background:#0f0f0f;padding:14px 0;margin:-14px 0;display:flex;align-items:baseline;gap:16px"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:500;letter-spacing:.14em;color:#ffffff">07</span><h2 style="margin:0;font-weight:400;font-size:clamp(28px,3.4vw,44px);line-height:1.05;letter-spacing:-.02em">The impact</h2></div>
+      <div style="position:sticky;top:48px;z-index:6;background:#0f0f0f;box-shadow:0 0 0 100vmax #0f0f0f;clip-path:inset(0 -100vmax);padding:14px 0;margin:-14px 0;display:flex;align-items:baseline;gap:16px"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:500;letter-spacing:.14em;color:#ffffff">07</span><h2 style="margin:0;font-weight:400;font-size:clamp(28px,3.4vw,44px);line-height:1.05;letter-spacing:-.02em">The impact</h2></div>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:clamp(32px,5vw,72px);align-items:end">
         <div style="display:flex;flex-direction:column;gap:8px">
           <span style="font-size:clamp(96px,14vw,220px);line-height:.85;letter-spacing:-.04em;font-style:italic">10</span>
