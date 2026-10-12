@@ -7,6 +7,10 @@
 - [Docwize](https://frankpeter.xyz/docwize): Rebuilding document review and approval for a SaaS document workflow product — inbox, review decisions, signature guard and design system.
 - [Woz](https://frankpeter.xyz/woz): Redesigning and building, in Framer, the landing page for Woz, an AI that builds professional mobile apps from a prompt. Live in 10 days.
 
+## About
+
+- [About](https://frankpeter.xyz/about): Experience, testimonials, ventures, tools and background (former pro basketball player).
+
 ## Contact
 
 - Website: https://frankpeter.xyz/
