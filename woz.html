@@ -9,9 +9,9 @@
 <meta name="author" content="Frankpeter">
 <meta name="theme-color" content="#0f0f0f">
 <link rel="canonical" href="https://frankpeter.xyz/woz">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
-<link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png?v=20261012">
+<link rel="icon" type="image/png" sizes="512x512" href="icon-512.png?v=20261012">
+<link rel="apple-touch-icon" href="apple-touch-icon.png?v=20261012">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Frankpeter">
 <meta property="og:title" content="Woz case study — AI app builder landing page | Frankpeter">
@@ -43,11 +43,13 @@
 <script src="./mobile-gate.js"></script>
 <script src="./cursor.js" defer=""></script>
 <script src="./sound.js" defer=""></script>
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png?v=20261012">
+<link rel="apple-touch-icon" href="apple-touch-icon.png?v=20261012">
 </helmet>
 <div data-wz-root="1" style="background:#0f0f0f;min-height:100vh">
 
 <section id="overview" data-sec="0" data-screen-label="00 Overview" style="position:relative;padding:clamp(56px,14vh,160px) clamp(22px,3vw,40px) 0;display:flex;flex-direction:column">
-  <a href="index.html" style="position:absolute;top:clamp(16px,2.4vh,40px);left:clamp(22px,3vw,40px);display:flex;align-items:center;gap:10px;font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#ffffff"><span aria-hidden="true">←</span><img src="logo-avatar.png" alt="" width="24" height="24" draggable="false" style="width:24px;height:24px;border-radius:50%;object-fit:cover;display:block;flex:none;box-shadow:0 0 0 1px rgba(255,255,255,.14);pointer-events:none;user-select:none">Back home</a>
+  <a href="index.html" style="position:absolute;top:clamp(16px,2.4vh,40px);left:clamp(22px,3vw,40px);display:flex;align-items:center;gap:10px;font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#ffffff"><span aria-hidden="true">←</span><img src="logo-avatar.png?v=20261012" alt="" width="24" height="24" draggable="false" style="width:24px;height:24px;border-radius:50%;object-fit:cover;display:block;flex:none;box-shadow:0 0 0 1px rgba(255,255,255,.14);pointer-events:none;user-select:none">Back home</a>
   <h1 style="margin:0 0 0 -.03em;font-weight:400;font-size:clamp(36px,5vw,76px);font-style:italic;line-height:1.02;letter-spacing:-.025em;max-width:20ch;text-wrap:balance">Rebuilding Woz's landing page to turn curious visitors into early users.</h1>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,170px),1fr));gap:24px 32px;margin-top:clamp(56px,11vh,120px)">
     <div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:18px;line-height:1.3;color:#ffffff">Project</span><span style="font-size:18px;line-height:1.3;color:#8f8f8f;text-wrap:pretty">Woz</span></div>
@@ -56,7 +58,7 @@
     <div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:18px;line-height:1.3;color:#ffffff">Scope</span><span style="font-size:18px;line-height:1.3;color:#8f8f8f;text-wrap:pretty">Landing page strategy, visual concepting, Framer build</span></div>
   </div>
   <div style="position:relative;overflow:hidden;background:#171717;margin:clamp(40px,6vh,64px) calc(-1 * clamp(22px,3vw,40px)) 0;border-radius:9px">
-    <video data-wz-video="1" src="woz-challenge.mp4" poster="woz-card.webp" autoplay="" muted="" loop="" playsinline="" preload="auto" disablePictureInPicture="" disableRemotePlayback="" controlsList="nodownload nofullscreen noremoteplayback noplaybackrate" draggable="false" style="display:block;width:100%;height:auto;pointer-events:none;user-select:none"></video>
+    <video data-wz-video="1" src="woz-challenge.mp4?v=20261012" poster="woz-card.webp?v=20261012" autoplay="" muted="" loop="" playsinline="" preload="auto" disablePictureInPicture="" disableRemotePlayback="" controlsList="nodownload nofullscreen noremoteplayback noplaybackrate" draggable="false" style="display:block;width:100%;height:auto;pointer-events:none;user-select:none"></video>
     <div data-guard="1" aria-hidden="true" style="position:absolute;inset:0;z-index:2"></div>
   </div>
   <div style="display:flex;padding:clamp(48px,8vh,96px) 0 clamp(56px,9vh,110px)">
@@ -66,7 +68,7 @@
 
 <main style="min-width:0">
   <div style="position:sticky;top:0;z-index:20;height:48px;box-sizing:border-box;background:rgba(15,15,15,.9);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.1);display:flex;align-items:center;padding:0 clamp(22px,3vw,40px)">
-    <nav style="flex:1;display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:6px;align-items:center">
+    <nav style="flex:1;display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:6px;align-items:center">
       <sc-for list="{{ nav }}" as="s" hint-placeholder-count="8">
         <a href="#{{ s.id }}" onClick="{{ s.go }}" title="{{ s.label }}" style="display:flex;flex-direction:column;min-width:0;padding:14px 0">
           <span style="height:2px;background:rgba(255,255,255,.14);border-radius:2px;overflow:hidden"><span style="display:block;height:100%;width:{{ s.fill }};background:{{ s.fillColor }}"></span></span>
@@ -106,10 +108,10 @@
       </div>
       <p style="margin:0;max-width:62ch;font-size:18px;line-height:1.55;color:#a3a3a3;text-wrap:pretty">The founders chose hero-first clarity. These are the heroes that didn't make the cut.</p>
       <div style="display:flex;flex-direction:column;gap:clamp(12px,1.5vw,24px)">
-        <figure style="margin:0;display:flex;flex-direction:column;gap:12px"><div style="position:relative;border-radius:9px;overflow:hidden;background:#171717"><img loading="lazy" decoding="async" src="woz-hero-v1.webp" alt="Unapproved hero variation 1" draggable="false" style="display:block;width:100%;height:auto;pointer-events:none;user-select:none"><div data-guard="1" style="position:absolute;inset:0"></div></div><figcaption style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#8f8f8f">Unapproved hero · 01</figcaption></figure>
+        <figure style="margin:0;display:flex;flex-direction:column;gap:12px"><div style="position:relative;border-radius:9px;overflow:hidden;background:#171717"><img src="woz-hero-v1.webp?v=20261012" alt="Unapproved hero variation 1" draggable="false" style="display:block;width:100%;height:auto;pointer-events:none;user-select:none"><div data-guard="1" style="position:absolute;inset:0"></div></div><figcaption style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#8f8f8f">Unapproved hero · 01</figcaption></figure>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:clamp(12px,1.5vw,24px)">
-          <figure style="margin:0;display:flex;flex-direction:column;gap:12px"><div style="position:relative;border-radius:9px;overflow:hidden;background:#171717"><img loading="lazy" decoding="async" src="woz-hero-v2.webp" alt="Unapproved hero variation 2" draggable="false" style="display:block;width:100%;height:auto;pointer-events:none;user-select:none"><div data-guard="1" style="position:absolute;inset:0"></div></div><figcaption style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#8f8f8f">Unapproved hero · 02</figcaption></figure>
-          <figure style="margin:0;display:flex;flex-direction:column;gap:12px"><div style="position:relative;border-radius:9px;overflow:hidden;background:#171717"><img loading="lazy" decoding="async" src="woz-hero-v3.webp" alt="Unapproved hero variation 3" draggable="false" style="display:block;width:100%;height:auto;pointer-events:none;user-select:none"><div data-guard="1" style="position:absolute;inset:0"></div></div><figcaption style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#8f8f8f">Unapproved hero · 03</figcaption></figure>
+          <figure style="margin:0;display:flex;flex-direction:column;gap:12px"><div style="position:relative;border-radius:9px;overflow:hidden;background:#171717"><img src="woz-hero-v2.webp?v=20261012" alt="Unapproved hero variation 2" draggable="false" style="display:block;width:100%;height:auto;pointer-events:none;user-select:none"><div data-guard="1" style="position:absolute;inset:0"></div></div><figcaption style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#8f8f8f">Unapproved hero · 02</figcaption></figure>
+          <figure style="margin:0;display:flex;flex-direction:column;gap:12px"><div style="position:relative;border-radius:9px;overflow:hidden;background:#171717"><img src="woz-hero-v3.webp?v=20261012" alt="Unapproved hero variation 3" draggable="false" style="display:block;width:100%;height:auto;pointer-events:none;user-select:none"><div data-guard="1" style="position:absolute;inset:0"></div></div><figcaption style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#8f8f8f">Unapproved hero · 03</figcaption></figure>
         </div>
       </div>
     </section>
@@ -118,7 +120,7 @@
       <div style="position:sticky;top:48px;z-index:6;background:#0f0f0f;box-shadow:0 0 0 100vmax #0f0f0f;clip-path:inset(0 -100vmax);padding:14px 0;margin:-14px 0;display:flex;align-items:baseline;gap:16px"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:500;letter-spacing:.14em;color:#ffffff">04</span><h2 style="margin:0;font-weight:400;font-size:clamp(28px,3.4vw,44px);line-height:1.05;letter-spacing:-.02em">The direction</h2></div>
       <div style="padding-left:max(0px, calc(18vw - 40px))"><p style="margin:0;max-width:26ch;font-size:clamp(28px,3.6vw,56px);line-height:1.12;letter-spacing:-.02em;color:#ffffff;text-wrap:balance">Clarity over hype. Show the apps, not the AI.</p></div>
       <p style="margin:0;max-width:62ch;font-size:18px;line-height:1.55;color:#a3a3a3;text-wrap:pretty">We landed on a simple, clean page built around the mobile apps themselves. Real snapshots of what Woz can build convert better than any explanation of how it works.</p>
-      <figure style="margin:0;display:flex;flex-direction:column;gap:12px"><div style="position:relative;border-radius:9px;overflow:hidden;background:#171717"><img loading="lazy" decoding="async" src="woz-final.webp" alt="Clean snapshots of mobile apps built with Woz" draggable="false" style="display:block;width:100%;height:auto;pointer-events:none;user-select:none"><div data-guard="1" style="position:absolute;inset:0"></div></div><figcaption style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#8f8f8f">Approved hero · app snapshots</figcaption></figure>
+      <figure style="margin:0;display:flex;flex-direction:column;gap:12px"><div style="position:relative;border-radius:9px;overflow:hidden;background:#171717"><img src="woz-final.webp?v=20261012" alt="Clean snapshots of mobile apps built with Woz" draggable="false" style="display:block;width:100%;height:auto;pointer-events:none;user-select:none"><div data-guard="1" style="position:absolute;inset:0"></div></div><figcaption style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#8f8f8f">Approved hero · app snapshots</figcaption></figure>
     </section>
 
     <section id="refinement" data-sec="5" data-screen-label="05 Refinement" style="padding:clamp(96px,16vh,200px) 0;display:flex;flex-direction:column;gap:clamp(36px,6vh,64px)">
@@ -146,8 +148,8 @@
       </div>
       <p style="margin:0;max-width:62ch;font-size:18px;line-height:1.55;color:#a3a3a3;text-wrap:pretty">The first draft had more sections than the product needed. We cut down to Woz's highest-priority value proposition, and the design was approved once the page said one thing well.</p>
       <div style="display:flex;flex-direction:column;gap:clamp(12px,1.5vw,24px)">
-        <div style="position:relative;border-radius:9px;overflow:hidden;background:#171717"><img loading="lazy" decoding="async" src="woz-week2-devices.webp" alt="Woz landing page on iPad, desktop and iPhone" draggable="false" style="display:block;width:100%;height:auto;pointer-events:none;user-select:none"><div data-guard="1" style="position:absolute;inset:0"></div></div>
-        <div style="position:relative;border-radius:9px;overflow:hidden;background:#171717"><img loading="lazy" decoding="async" src="woz-week2-sections.webp" alt="Woz hero, pricing and how-it-works sections" draggable="false" style="display:block;width:100%;height:auto;pointer-events:none;user-select:none"><div data-guard="1" style="position:absolute;inset:0"></div></div>
+        <div style="position:relative;border-radius:9px;overflow:hidden;background:#171717"><img src="woz-week2-devices.webp?v=20261012" alt="Woz landing page on iPad, desktop and iPhone" draggable="false" style="display:block;width:100%;height:auto;pointer-events:none;user-select:none"><div data-guard="1" style="position:absolute;inset:0"></div></div>
+        <div style="position:relative;border-radius:9px;overflow:hidden;background:#171717"><img src="woz-week2-sections.webp?v=20261012" alt="Woz hero, pricing and how-it-works sections" draggable="false" style="display:block;width:100%;height:auto;pointer-events:none;user-select:none"><div data-guard="1" style="position:absolute;inset:0"></div></div>
       </div>
     </section>
 
@@ -166,7 +168,7 @@
           <div style="display:grid;grid-template-columns:28px 1fr;padding:12px 0;border-top:1px solid rgba(255,255,255,.14)"><span style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#8f8f8f;padding-top:4px">05</span>Components and CMS structure in Framer</div>
         </div>
       </div>
-      <figure style="margin:0;display:flex;flex-direction:column;gap:12px"><div style="position:relative;border-radius:9px;overflow:hidden;background:#171717"><video data-wz-video="1" src="woz-framer-build.mp4" autoplay="" muted="" loop="" playsinline="" preload="metadata" disablePictureInPicture="" disableRemotePlayback="" controlsList="nodownload nofullscreen noremoteplayback noplaybackrate" draggable="false" style="display:block;width:100%;height:auto;pointer-events:none;user-select:none"></video><div data-guard="1" style="position:absolute;inset:0"></div></div><figcaption style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#8f8f8f">The complete website, live on Framer</figcaption></figure>
+      <figure style="margin:0;display:flex;flex-direction:column;gap:12px"><div style="position:relative;border-radius:9px;overflow:hidden;background:#171717"><video data-wz-video="1" src="woz-framer-build.mp4?v=20261012" autoplay="" muted="" loop="" playsinline="" preload="metadata" disablePictureInPicture="" disableRemotePlayback="" controlsList="nodownload nofullscreen noremoteplayback noplaybackrate" draggable="false" style="display:block;width:100%;height:auto;pointer-events:none;user-select:none"></video><div data-guard="1" style="position:absolute;inset:0"></div></div><figcaption style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#8f8f8f">The complete website, live on Framer</figcaption></figure>
     </section>
 
     <section id="impact" data-sec="7" data-screen-label="07 Impact" style="padding:clamp(96px,16vh,200px) 0 clamp(80px,14vh,160px);display:flex;flex-direction:column;gap:clamp(36px,6vh,64px)">
@@ -183,14 +185,14 @@
           <div style="display:grid;grid-template-columns:28px 1fr;padding:12px 0;border-top:1px solid rgba(255,255,255,.14)"><span style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#8f8f8f;padding-top:4px">04</span>Strong feedback from businesses already building on Woz</div>
         </div>
       </div>
-      <div style="position:relative;border-radius:9px;overflow:hidden;background:#171717"><img loading="lazy" decoding="async" src="woz-results.webp" alt="Live Woz landing page on a laptop" draggable="false" style="display:block;width:100%;height:auto;pointer-events:none;user-select:none"><div data-guard="1" style="position:absolute;inset:0"></div></div>
+      <div style="position:relative;border-radius:9px;overflow:hidden;background:#171717"><img src="woz-results.webp?v=20261012" alt="Live Woz landing page on a laptop" draggable="false" style="display:block;width:100%;height:auto;pointer-events:none;user-select:none"><div data-guard="1" style="position:absolute;inset:0"></div></div>
 
       <a href="docwize.html" aria-label="Next case study" style="position:relative;display:flex;align-items:center;min-height:calc(clamp(180px,24vw,380px) * 1.5 + 2 * clamp(40px,8vh,96px));margin:clamp(40px,8vh,96px) calc(-1 * clamp(22px,3vw,40px)) 0;overflow:hidden;color:#ffffff">
         <div data-marquee="1" style="display:flex;width:max-content;font-size:clamp(88px,15vw,240px);font-weight:400;line-height:1;letter-spacing:-.035em;will-change:transform">
           <span style="display:flex"><span style="display:flex;align-items:center;gap:.35em;padding-right:.35em;white-space:nowrap">Next case study<span style="display:inline-block;width:.18em;height:.18em;border-radius:50%;background:#ffffff"></span></span><span style="display:flex;align-items:center;gap:.35em;padding-right:.35em;white-space:nowrap">Next case study<span style="display:inline-block;width:.18em;height:.18em;border-radius:50%;background:#ffffff"></span></span><span style="display:flex;align-items:center;gap:.35em;padding-right:.35em;white-space:nowrap">Next case study<span style="display:inline-block;width:.18em;height:.18em;border-radius:50%;background:#ffffff"></span></span></span><span aria-hidden="true" style="display:flex"><span style="display:flex;align-items:center;gap:.35em;padding-right:.35em;white-space:nowrap">Next case study<span style="display:inline-block;width:.18em;height:.18em;border-radius:50%;background:#ffffff"></span></span><span style="display:flex;align-items:center;gap:.35em;padding-right:.35em;white-space:nowrap">Next case study<span style="display:inline-block;width:.18em;height:.18em;border-radius:50%;background:#ffffff"></span></span><span style="display:flex;align-items:center;gap:.35em;padding-right:.35em;white-space:nowrap">Next case study<span style="display:inline-block;width:.18em;height:.18em;border-radius:50%;background:#ffffff"></span></span></span>
         </div>
         <div style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:clamp(180px,24vw,380px);aspect-ratio:2/3;border-radius:9px;overflow:hidden;background:#171717;box-shadow:0 40px 80px -30px rgba(0,0,0,.8);transition:transform .6s cubic-bezier(.2,.8,.2,1)" style-hover="transform:translate(-50%,-50%) scale(1.03)">
-          <img loading="lazy" decoding="async" src="docwize-card.png" alt="Docwize" draggable="false" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;user-select:none">
+          <img src="docwize-card.png?v=20261012" alt="Docwize" draggable="false" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;user-select:none">
         </div>
       </a>
     </section>
@@ -225,11 +227,27 @@ class Component extends DCLogic {
   intro(){
     const root = document.querySelector("[data-wz-root]");
     if (!root || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    root.style.height = "100vh"; root.style.overflow = "hidden"; root.style.transformOrigin = "50% 0";
+    root.style.height = "100vh"; root.style.overflow = "hidden";
+    const ease = "cubic-bezier(.19,1,.22,1)";
+    document.documentElement.style.background = "#070707"; document.body.style.background = "#070707";
+    const plate = document.createElement("div");
+    plate.setAttribute("aria-hidden", "true");
+    plate.style.cssText = "position:fixed;inset:0;z-index:0;pointer-events:none;background:#232323;border-radius:22px 22px 0 0;transform-origin:50% 0;box-shadow:0 -1px 0 rgba(255,255,255,.08) inset";
+    document.body.prepend(plate);
+    root.style.position = "relative"; root.style.zIndex = "1";
+    plate.animate([
+      { transform: "translateY(100vh) scale(.9)" },
+      { transform: "translateY(0) scale(.94)", offset: .75 },
+      { transform: "translateY(0) scale(.94)", opacity: 1 }
+    ], { duration: 1150, easing: ease, fill: "forwards" });
     const anim = root.animate([
-      { transform: "translateY(100vh) scale(.72)", borderRadius: "24px" },
-      { transform: "translateY(0) scale(1)", borderRadius: "0" }
-    ], { duration: 1100, easing: "cubic-bezier(.76,0,.24,1)" });
+      { transform: "translateY(100vh)", borderRadius: "22px 22px 0 0", boxShadow: "0 -40px 90px rgba(0,0,0,.75), 0 -1px 0 rgba(255,255,255,.1)" },
+      { transform: "translateY(0)", borderRadius: "22px 22px 0 0", boxShadow: "0 -40px 90px rgba(0,0,0,.75), 0 -1px 0 rgba(255,255,255,.1)", offset: .85 },
+      { transform: "translateY(0)", borderRadius: "0 0 0 0", boxShadow: "0 0 0 rgba(0,0,0,0), 0 0 0 rgba(255,255,255,0)" }
+    ], { duration: 1250, delay: 140, easing: ease, fill: "backwards" });
+    const h1 = root.querySelector("h1");
+    if (h1) h1.animate([{ transform: "translateY(28px)", opacity: 0 }, { transform: "translateY(0)", opacity: 1 }], { duration: 900, delay: 520, easing: ease, fill: "backwards" });
+    anim.addEventListener("finish", () => { plate.remove(); root.style.zIndex = ""; document.documentElement.style.background = "#0f0f0f"; document.body.style.background = "#0f0f0f"; });
     anim.onfinish = () => { root.style.height = ""; root.style.overflow = ""; this.measure(); };
   }
   measure(){

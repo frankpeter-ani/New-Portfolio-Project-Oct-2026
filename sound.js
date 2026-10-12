@@ -74,7 +74,19 @@ var S = {
   },
   // email copied: three bubbles rising in pitch
   copy: function(t){ [0, .07, .14].forEach(function(d, i){ var b = 420 * Math.pow(1.26, i); drop(t + d, b, b * 2, .1, .04); }); },
-  toggle: function(t){ drop(t, 380, 760, .09, .04); }
+  toggle: function(t){ drop(t, 380, 760, .09, .04); },
+  // water splash: filtered noise burst + scattered droplets
+  splash: function(t){
+    var n = Math.floor(ctx.sampleRate * .45), buf = ctx.createBuffer(1, n, ctx.sampleRate), d = buf.getChannelData(0);
+    for (var i = 0; i < n; i++) d[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / n, 2.2);
+    var s = ctx.createBufferSource(), bp = ctx.createBiquadFilter(), g = ctx.createGain();
+    s.buffer = buf; bp.type = 'bandpass'; bp.Q.value = .8;
+    bp.frequency.setValueAtTime(2600, t); bp.frequency.exponentialRampToValueAtTime(700, t + .35);
+    g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(.09, t + .012); g.gain.exponentialRampToValueAtTime(.0001, t + .42);
+    s.connect(bp); bp.connect(g); g.connect(master); s.start(t); s.stop(t + .45);
+    drop(t, r(260, 320), r(600, 700), .16, .07);
+    for (var k = 0; k < 5; k++){ var f = r(700, 1500); drop(t + .06 + k * r(.03, .06), f, f * r(1.5, 2.1), r(.04, .07), r(.015, .03)); }
+  }
 };
 function play(name){
   if (ctx && ctx.state === 'suspended' && navigator.userActivation && navigator.userActivation.hasBeenActive) ctx.resume();
@@ -108,7 +120,7 @@ function mountBar(){
   var w = document.createElement('div');
   w.setAttribute('data-fp-sound', '1'); w.setAttribute('role', 'status');
   w.style.cssText = 'position:fixed;left:0;right:0;top:0;z-index:2147483000;display:flex;align-items:center;justify-content:center;min-height:36px;padding:8px 56px;box-sizing:border-box;background:#ffffff;color:#0f0f0f;font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:500;letter-spacing:.08em;text-align:center;transform:translateY(-100%);transition:transform .5s cubic-bezier(.2,.8,.2,1)';
-  w.innerHTML = '<span>This site has sound effects. <button type="button" data-on style="all:unset;cursor:pointer;text-decoration:underline;text-underline-offset:3px">Turn them on</button>, or use the speaker ' + (home ? 'under Contact' : 'on the homepage') + ' whenever.</span>' +
+  w.innerHTML = '<span>This site has sound effects. <button type="button" data-on style="all:unset;cursor:pointer;text-decoration:underline;text-underline-offset:3px">Turn them on</button>, or use the speaker whenever.</span>' +
     '<button type="button" data-x aria-label="Dismiss" style="all:unset;cursor:pointer;position:absolute;right:clamp(14px,2vw,28px);top:50%;transform:translateY(-50%);display:flex;align-items:center;justify-content:center;width:24px;height:24px;font-size:16px;line-height:1">×</button>';
   var shown = false;
   function push(px){ document.documentElement.style.setProperty('--fp-bar', px + 'px'); document.body.style.transition = 'padding-top .5s cubic-bezier(.2,.8,.2,1)'; document.body.style.paddingTop = px ? px + 'px' : ''; }
