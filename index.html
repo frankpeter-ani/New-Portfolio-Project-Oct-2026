@@ -43,6 +43,9 @@
 <script src="./mobile-gate.js"></script>
 <script src="./cursor.js" defer=""></script>
 <script src="./sound.js" defer=""></script>
+<script src="./reveal.js"></script>
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 </helmet>
 <main data-theme="dark" style="position: relative; display: flex; flex-direction: column; height: 100dvh; min-height: 440px; box-sizing: border-box; padding: clamp(16px,2.4vh,40px) clamp(22px,3vw,40px); overflow: visible; background: linear-gradient(rgba(15,15,15,.84), rgba(15,15,15,.84)), url(&quot;./layer-z3-remove-background-mu5b8e1z-cox9.png&quot;) top right / contain no-repeat, #0f0f0f; color: #ffffff">
   <canvas data-fx-canvas="1" style="position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none"></canvas>
@@ -71,15 +74,15 @@
       <nav style="display:grid;gap:6px;font-family:Newsreader,Georgia,serif;font-size:clamp(15px,2.2vh,20px);line-height:1.3;color:#ffffff">
         <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#8f8f8f;padding-bottom:10px">Menu</div>
         <a href="#work" style="font-style: italic; font-weight: 500">Work</a>
-        <a href="#about" style="font-style: italic">About</a>
-        <a href="#craft" style="font-style: italic">Craft</a>
-        <a href="#writing" style="font-style: italic">Studio</a>
+        <a href="about.html" style="font-style: italic">About</a>
+        <span aria-disabled="true" title="Coming soon" style="font-style: italic;cursor:not-allowed;opacity:.55">Craft</span>
+        <span aria-disabled="true" title="Coming soon" style="font-style: italic;cursor:not-allowed;opacity:.55">Studio</span>
       </nav>
       <div style="display:grid;gap:9px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#a3a3a3">
         <a href="https://linkedin.com/in/frankpeter-ani" target="_blank" rel="noopener me">LinkedIn</a>
         <a href="https://dribbble.com/frankpeter-ani" target="_blank" rel="noopener me">Dribbble</a>
         <a href="#">Résumé</a>
-        <a href="mailto:hello@frankpeter.xyz">Email</a>
+        <a href="https://contra.com/frankpeter" target="_blank" rel="noopener me">Contra</a>
       </div>
     </div>
 
@@ -107,7 +110,7 @@
 
   <sc-for list="{{ cards }}" as="c" hint-placeholder-count="4">
     <div style="position:absolute;inset:0;z-index:50;pointer-events:none;overflow:hidden;background:#0f0f0f;contain:strict;transform:translateZ(0);backface-visibility:hidden;opacity:{{ c.ov }};visibility:{{ c.vis }};transition:opacity .14s ease,visibility .14s">
-      <img loading="lazy" decoding="async" alt="{{ c.name }} background" data-src="{{ c.bg }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;opacity:{{ c.imgOp }}">
+      <img alt="{{ c.name }} background" data-src="{{ c.bg }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;opacity:{{ c.imgOp }}">
       <div style="position:absolute;inset:0;background:{{ c.scrim }}"></div>
       <div style="position:absolute;inset:0;display:grid;grid-template-rows:auto 1fr auto;padding:clamp(16px,2.4vh,40px) clamp(22px,3vw,40px);box-sizing:border-box">
         <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:24px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#ffffff">
@@ -115,10 +118,16 @@
           <div style="color:#d6d2c9">{{ c.year }}</div>
         </div>
       </div>
-      <div style="position:absolute;right:clamp(22px,3vw,40px);bottom:calc(clamp(16px,2.4vh,40px) + 10px);font-family:'IBM Plex Mono',monospace;font-size:10.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#d6d2c9;text-align:right">{{ c.tags }}</div>
+      <div data-tags="{{ c.i }}" style="position:absolute;right:clamp(22px,3vw,40px);bottom:calc(clamp(16px,2.4vh,40px) + 10px);font-family:'IBM Plex Mono',monospace;font-size:10.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#d6d2c9;text-align:right">{{ c.tags }}</div>
       <div data-cap="{{ c.i }}" style="position:absolute;left:{{ c.capLeft }};top:{{ c.capTop }};display:flex;flex-direction:column;align-items:flex-start;gap:5px;width:23%;min-width:130px;text-align:left">
         <h2 style="margin:0;font-family:Newsreader,Georgia,serif;font-weight:400;font-style:italic;font-size:clamp(21px,2.9vh,27px);line-height:1.05;letter-spacing:-.01em;color:#ffffff">{{ c.name }}</h2>
         <p style="margin:0;max-width:30ch;font-family:Newsreader,Georgia,serif;font-size:clamp(12.5px,1.8vh,14.5px);line-height:1.5;color:#e8e5de;text-wrap:pretty">{{ c.desc }}</p>
+        <sc-if value="{{ c.hasStat }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;flex-direction:column;gap:4px;margin-top:clamp(6px,1.4vh,18px)">
+            <div style="display:flex;align-items:center;gap:8px;font-family:Newsreader,Georgia,serif;font-size:clamp(17px,2.4vh,22px);line-height:1.1;color:#ffffff"><span style="display:flex;align-items:center;justify-content:center;width:18px;height:18px;flex:none;border-radius:999px;background:#ffffff;color:#0f0f0f;font-family:'IBM Plex Mono',monospace;font-size:13px;line-height:0;padding-bottom:1px;box-sizing:border-box">+</span>{{ c.stat }}</div>
+            <p style="margin:0;max-width:36ch;font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:500;line-height:1.6;letter-spacing:.14em;text-transform:uppercase;color:#a3a3a3;text-wrap:pretty">{{ c.statNote }}</p>
+          </div>
+        </sc-if>
       </div>
     </div>
   </sc-for>
@@ -127,7 +136,7 @@
     <sc-for list="{{ cards }}" as="c" hint-placeholder-count="4">
       <a href="{{ c.href }}" onMouseEnter="{{ enter }}" onMouseLeave="{{ cardLeave }}" onMouseMove="{{ cardMove }}" data-i="{{ c.i }}" style="position:absolute;left:{{ c.left }};top:50%;width:23%;min-width:130px;padding:2px;box-sizing:border-box;border-radius:10px;background:#ffffff;box-shadow:0 18px 44px rgba(0,0,0,.6);transform:translateY({{ c.top }}) rotate({{ c.rot }});z-index:{{ c.z }};opacity:{{ c.cardOp }};transition:opacity .22s ease,transform .55s cubic-bezier(.22,.7,.2,1)">
         <div style="position:relative;aspect-ratio:16/10;border-radius:9px;overflow:hidden;background:#ffffff">
-          <img loading="lazy" decoding="async" alt="{{ c.shot }}" data-src="{{ c.img }}" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:9px;transform:{{ c.imgScale }}">
+          <sc-if value="{{ c.video }}" hint-placeholder-val="{{ false }}"><video data-src="{{ c.video }}" data-poster="{{ c.img }}" autoplay="{{ true }}" muted="{{ true }}" loop="{{ true }}" playsinline="{{ true }}" preload="metadata" aria-label="{{ c.shot }}" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:9px;transform:{{ c.imgScale }}"></video></sc-if><sc-if value="{{ c.logo }}" hint-placeholder-val="{{ false }}"><img alt="" aria-hidden="true" data-src="{{ c.logo }}" style="position:absolute;left:50%;top:50%;width:20%;height:auto;transform:translate(-50%,-50%);opacity:1;filter:drop-shadow(0 0 1px rgba(255,255,255,.9)) drop-shadow(0 0 12px rgba(255,255,255,.45));pointer-events:none;z-index:1"></sc-if><sc-if value="{{ c.noVideo }}" hint-placeholder-val="{{ true }}"><img alt="{{ c.shot }}" data-src="{{ c.img }}" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:9px;transform:{{ c.imgScale }}"></sc-if>
           <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(15,15,15,.62);opacity:{{ c.soonOp }};visibility:{{ c.soonVis }};transition:opacity .16s ease,visibility .16s">
             <span style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#ffffff;border:1px solid rgba(255,255,255,.5);border-radius:999px;padding:6px 12px;white-space:nowrap">Coming soon</span>
           </div>
@@ -141,7 +150,7 @@
       </a>
     </sc-for>
   </div><div style="position:relative;z-index:10;flex:none;background:transparent;display:flex;align-items:flex-end;justify-content:space-between;gap:clamp(20px,4vw,60px);flex-wrap:wrap;padding-top:clamp(10px,2vw,24px)">
-    <h1 style="margin: 0; flex: 1 1 auto; max-width: 100%; white-space: nowrap; font-family: Newsreader,Georgia,serif; font-weight: 400; font-size: clamp(17px,min(2.1vw,3.2vh),27px); line-height: 1.25; letter-spacing: -.02em; color: #ffffff; font-style: italic">Product success is my <i style="font-style: italic">thing</i>. People are the point.</h1>
+    <h1 style="margin: 0; flex: 1 1 auto; max-width: 100%; white-space: nowrap; font-family: Newsreader,Georgia,serif; font-weight: 400; font-size: clamp(30px,min(3.4vw,5.6vh),56px); line-height: 1.25; letter-spacing: -.02em; color: #ffffff; font-style: italic">Product success is my <i style="font-style: italic">thing</i>. People are the point.</h1>
     <!-- HIDDEN: Scroll for work label <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#8f8f8f;padding-bottom:10px">Scroll ↓ for work</div> -->
   </div>
 </main>
@@ -150,14 +159,18 @@
 class Component extends DCLogic {
   items = [
     ["Docwize","Document workflow — app UI","2026","3%","calc(-50% + 30px)","-7.5deg","docwize-card.png","Product Design, Design Systems","Rebuilding document review into a single, calm workflow for legal teams.","docwize-slanted.webp","light"],
-    ["Woz","AI mobile app builder — landing page","2025","27%","calc(-50% - 34px)","5deg","woz-card.webp","Web Design, Framer","Revamping Woz to enable businesses to build professional mobile apps with AI.","woz-hover-bg.webp","light"],
-    ["React components","Components library — web app","2024","50%","calc(-50% + 40px)","-3.5deg","shadeform-card.webp","Design Systems, Product Strategy","A component library that lets Tempo users ship like a twenty-person squad."],
-    ["Tempo","Design-to-React IDE — core product","2024","72%","calc(-50% - 20px)","9.5deg","tempo-card.avif","Product Design, Design Engineering","Core product design, design system architecture, visual rebranding and design engineering for the design-to-React IDE."],
+    ["Woz","AI mobile app builder — landing page","2025","27%","calc(-50% - 34px)","5deg","woz-card.webp","Web Design, Framer","Revamping Woz to enable businesses to build professional mobile apps with AI.","woz-hover-bg.webp","light","$6M seed raise","Led by Cervin Ventures, after 3 months rebuilding the design system and website. Featured on Contra."],
+    ["Shadeform","GPU cloud marketplace — web app","2025","50%","calc(-50% + 40px)","-3.5deg","shadeform-card.webp","Product Design, Brand","Designing a simpler way to find, compare and launch GPUs across clouds."],
+    ["Tempo","Design-to-React IDE — core product","2024","72%","calc(-50% - 20px)","9.5deg","tempo-card.avif","Product Design, Design Engineering","Core product design, design system architecture, visual rebranding and design engineering for the design-to-React IDE.",undefined,undefined,"$5M seed raise","Backed by Webflow Ventures and YC, after 21 months as the sole designer across web, product and brand."],
   ];
   loadShots = () => {
     const host = this.hostEl || document;
     host.querySelectorAll("img[data-src]").forEach(img => {
       if (img.getAttribute("src") !== img.dataset.src) img.src = img.dataset.src;
+    });
+    host.querySelectorAll("video[data-src]").forEach(v => {
+      if (v.dataset.poster && v.getAttribute("poster") !== v.dataset.poster) v.poster = v.dataset.poster;
+      if (v.dataset.src && v.getAttribute("src") !== v.dataset.src){ v.src = v.dataset.src; v.muted = true; v.loop = true; v.playsInline = true; const p = v.play(); if (p && p.catch) p.catch(() => {}); }
     });
   };
   startEffect(){
@@ -243,7 +256,15 @@ class Component extends DCLogic {
         o.globalCompositeOperation = 'source-in';
         var sc = Math.min(w/img.naturalWidth, h/img.naturalHeight);
         var iw = img.naturalWidth*sc, ih = img.naturalHeight*sc;
-        o.drawImage(img, w-iw, 0, iw, ih);
+        var nx = ((self.px||w/2)/w - .5), ny = ((self.py||h/2)/h - .5);
+        self.tlx = (self.tlx||0) + (nx - (self.tlx||0))*.08;
+        self.tly = (self.tly||0) + (ny - (self.tly||0))*.08;
+        var cx = w - iw/2, cy = ih/2;
+        o.save();
+        o.translate(cx, cy);
+        o.rotate(self.tlx*0.12);
+        o.drawImage(img, -iw/2, -ih/2, iw, ih);
+        o.restore();
         o.globalCompositeOperation = 'source-atop';
         o.fillStyle = 'rgba(255,255,255,.1)';
         o.fillRect(0,0,w,h);
@@ -316,23 +337,26 @@ class Component extends DCLogic {
     const hoverT = (L) => base + " translateY(-" + Math.round(L) + "px) scale(1.04)";
     const root = (document.querySelector('[data-stage]') || el).parentElement;
     const rr = root ? root.getBoundingClientRect() : { top: 0, left: 0, height: innerHeight };
-    const rh = rr.height || innerHeight;
+    const rh = Math.min(rr.height || innerHeight, innerHeight - Math.max(0, rr.top));
     const cap = document.querySelector('[data-cap="' + idx + '"]');
     const blockH = (cap ? cap.getBoundingClientRect().height : 0) || 84;
+    const tg = document.querySelector('[data-tags="' + idx + '"]');
+    const tgTop = tg ? tg.getBoundingClientRect().top - rr.top : rh;
+    const pad = Math.max(12, rh - Math.min(rh, tgTop) + 12);
 
     const trans = el.style.transition;
     el.style.transition = "none";
     el.style.transform = hoverT(14);
     void el.offsetWidth;
     let er = el.getBoundingClientRect();
-    let lift = 14 + Math.max(0, (er.bottom - rr.top) + 32 + blockH + 12 - rh);
+    let lift = 14 + Math.max(0, (er.bottom - rr.top) + 32 + blockH + pad - rh);
     if (lift > 14){
       el.style.transform = hoverT(lift);
       void el.offsetWidth;
       er = el.getBoundingClientRect();
     }
     const capLeft = Math.round(er.left - rr.left);
-    const capTop = Math.round(Math.min(er.bottom - rr.top + 32, rh - blockH - 12));
+    const capTop = Math.round(Math.min(er.bottom - rr.top + 32, rh - blockH - pad));
     el.style.transform = el.dataset.rot || "";
     void el.offsetWidth;
     el.style.transition = trans;
@@ -370,9 +394,9 @@ class Component extends DCLogic {
     const cardMove = this.cardMove;
     const cards = this.items.map((it,i) => ({
       i, name: it[0], shot: it[1], year: it[2], left: it[3], top: it[4], rot: it[5], img: it[6],
-      tags: it[7], desc: it[8], bg: it[9] || it[6],
+      tags: it[7], desc: it[8], bg: it[9] || it[6], stat: it[11], statNote: it[12], hasStat: !!it[11], logo: i === 0 ? "docwize-logo.png" : "", video: i === 0 ? "docwize-card.mp4" : "", noVideo: i !== 0,
       href: i === 0 ? "docwize.html" : (i === 1 ? "woz.html" : "#work"),
-      imgScale: i === 0 ? "scale(1.28)" : (i === 1 ? "scale(1.14)" : "none"),
+      imgScale: i === 0 ? "none" : (i === 1 ? "scale(1.14)" : "none"),
       capTop: (this.state.capTop || 0) + "px",
       capLeft: (this.state.capLeft || 0) + "px",
       dir: i % 2 ? "row-reverse" : "row",
