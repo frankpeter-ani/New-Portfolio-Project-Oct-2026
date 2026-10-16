@@ -2,11 +2,11 @@
   "cleanUrls": true,
   "headers": [
     {
-      "source": "/(.*)\\.(webp|png|avif|jpeg|mp4)",
+      "source": "/(.*)\\.(webp|png|avif|jpe?g|mp4|svg|js)",
       "headers": [
         {
           "key": "Cache-Control",
-          "value": "public, max-age=3600, must-revalidate"
+          "value": "public, max-age=3600, stale-while-revalidate=604800"
         }
       ]
     }
