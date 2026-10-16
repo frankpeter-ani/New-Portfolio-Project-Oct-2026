@@ -161,10 +161,10 @@
 <script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:900},&quot;showWorksCard&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Layout&quot;}}">
 class Component extends DCLogic {
   items = [
-    ["Docwize","Document workflow — app UI","2026","3%","calc(-50% + 30px)","-7.5deg","docwize-cover-2026.webp","Product Design, Design Systems","A B2B compliance platform for construction, with document signing built for corporate and legal teams.","docwize-slanted-2026.webp","light"],
-    ["Woz","AI mobile app builder — landing page","2025","27%","calc(-50% - 34px)","5deg","woz-cover-2026.webp","Web Design, Framer","A B2B dashboard that lets businesses build and manage mobile apps with AI.","woz-hover-bg-2026.webp","light","$6M seed raise","After 3 months handling their decks, brand and logo revamp. ✦ Featured on Contra."],
+    ["Docwize","Document workflow — app UI","2026","72%","calc(-50% - 20px)","9.5deg","docwize-cover-2026b.webp","Product Design, Design Systems","A B2B compliance platform for construction, with document signing built for corporate and legal teams.","docwize-slanted-2026.webp","light"],
+    ["Woz","AI mobile app builder — landing page","2025","27%","calc(-50% - 34px)","5deg","woz-cover-2026b.webp","Web Design, Framer","A B2B dashboard that lets businesses build and manage mobile apps with AI.","woz-hover-bg-2026.webp","light","$6M seed raise","After 3 months handling their decks, brand and logo revamp. ✦ Featured on Contra."],
     ["Shadeform","GPU cloud marketplace — web app","2025","50%","calc(-50% + 40px)","-3.5deg","shadeform-cover-2026.webp","Product Design, Brand","A B2B GPU cloud marketplace that helps engineering teams compare, deploy and manage compute across providers."],
-    ["Tempo","Design-to-React IDE — core product","2024","72%","calc(-50% - 20px)","9.5deg","tempo-card.avif?v=20261012","Product Design, Design Engineering","An AI visual IDE for building React apps, plus Agent+, a B2B service where Tempo’s team and AI ship features for companies.",undefined,undefined,"$5M seed raise","Backed by Webflow Ventures and YC, after 21 months as the sole designer across web, product and brand."],
+    ["Tempo","Design-to-React IDE — core product","2024","3%","calc(-50% + 30px)","-7.5deg","tempo-cover-2026.webp","Product Design, Design Engineering","An AI visual IDE for building React apps, plus Agent+, a B2B service where Tempo’s team and AI ship features for companies.",undefined,undefined,"$5M seed raise","Backed by Webflow Ventures and YC, after 21 months as the sole designer across web, product and brand."],
   ];
   loadShots = () => {
     const host = this.hostEl || document;
@@ -405,7 +405,7 @@ class Component extends DCLogic {
     const cardMove = this.cardMove;
     const cards = this.items.map((it,i) => ({
       i, name: it[0], shot: it[1], year: it[2], left: it[3], top: it[4], rot: it[5], img: it[6],
-      tags: it[7], desc: it[8], bg: it[9] || it[6], stat: it[11], statNote: it[12], hasStat: !!it[11], title: i === 1 ? "Woz (YC W25)" : (i === 2 ? "Shadeform (YC S23)" : (i === 3 ? "Tempo (YC S23)" : it[0])), statPos: (i === 1 || i === 3) ? "absolute" : "static", statL: i === 1 ? (this.state.statDx || 0) + "px" : (i === 3 ? "-36px" : "auto"), statT: (i === 1 || i === 3) ? (this.state.statDy || 0) + "px" : "auto", statTf: i === 1 ? "translateY(-50%)" : (i === 3 ? "translate(-100%,-50%)" : "none"), statW: (i === 1 || i === 3) ? "clamp(220px,22vw,320px)" : "auto", capDir: "column", capAlign: "flex-start", capGap: "5px", capW: "23%", statMt: (i === 3 || i === 1) ? "0" : "clamp(6px,1.4vh,18px)", logo: "", video: "", noVideo: true, hv: ["docwize-card.mp4?v=20261012","woz-card-hover.mp4"][i] || "",
+      tags: it[7], desc: it[8], bg: it[9] || it[6], stat: it[11], statNote: it[12], hasStat: !!it[11], title: i === 1 ? "Woz (YC W25)" : (i === 2 ? "Shadeform (YC S23)" : (i === 3 ? "Tempo (YC S23)" : it[0])), statPos: (i === 1 || i === 3) ? "absolute" : "static", statL: (i === 1 || i === 3) ? (this.state.statDx || 0) + "px" : "auto", statT: (i === 1 || i === 3) ? (this.state.statDy || 0) + "px" : "auto", statTf: (i === 1 || i === 3) ? "translateY(-50%)" : "none", statW: (i === 1 || i === 3) ? "clamp(220px,22vw,320px)" : "auto", capDir: "column", capAlign: "flex-start", capGap: "5px", capW: "23%", statMt: (i === 3 || i === 1) ? "0" : "clamp(6px,1.4vh,18px)", logo: "", video: "", noVideo: true, hv: ["docwize-card.mp4?v=20261012","woz-card-hover.mp4"][i] || "",
       href: i === 0 ? "docwize.html" : (i === 1 ? "woz.html" : "#work"),
       imgScale: "none",
       capTop: (this.state.capTop || 0) + "px",
@@ -415,7 +415,7 @@ class Component extends DCLogic {
       scrim: it[10] === "light"
         ? "linear-gradient(180deg,rgba(15,15,15,.66) 0%,rgba(15,15,15,.44) 40%,rgba(15,15,15,.74) 100%)"
         : "linear-gradient(180deg,rgba(15,15,15,.56) 0%,rgba(15,15,15,.3) 44%,rgba(15,15,15,.66) 100%)",
-      z: 5 + i,
+      z: i === 0 ? 9 : 5 + i,
       soonOp: (a === i && (i === 2 || i === 3)) ? 1 : 0,
       soonVis: (a === i && (i === 2 || i === 3)) ? "visible" : "hidden",
       viewOp: (a === i && i < 2) ? 1 : 0,
