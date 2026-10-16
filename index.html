@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,17 +7,22 @@
 <meta name="description" content="Frankpeter is a senior product designer for AI and SaaS products, working across product, UX, design systems and motion. Based in Enugu, Nigeria. Previously design lead on Tempo and Shadeform. Open to full-time roles.">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta name="author" content="Frankpeter">
+<meta name="color-scheme" content="dark">
 <meta name="theme-color" content="#0f0f0f">
 <link rel="canonical" href="https://frankpeter.xyz/">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png?v=20261012">
 <link rel="icon" type="image/png" sizes="512x512" href="icon-512.png?v=20261012">
 <link rel="apple-touch-icon" href="apple-touch-icon.png?v=20261012">
+<meta property="og:locale" content="en_US">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Frankpeter">
 <meta property="og:title" content="Frankpeter — Senior Product Designer for AI &amp; SaaS">
 <meta property="og:description" content="Frankpeter is a senior product designer for AI and SaaS products, working across product, UX, design systems and motion. Previously design lead on Tempo and Shadeform. Open to full-time roles.">
 <meta property="og:url" content="https://frankpeter.xyz/">
 <meta property="og:image" content="https://frankpeter.xyz/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Frankpeter — Senior Product Designer">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Frankpeter — Senior Product Designer for AI &amp; SaaS">
 <meta name="twitter:description" content="Frankpeter is a senior product designer for AI and SaaS products, working across product, UX, design systems and motion. Previously design lead on Tempo and Shadeform. Open to full-time roles.">
@@ -26,6 +31,8 @@
 <script src="./reveal.js"></script>
 <link rel="preload" as="image" href="hero-silhouette.webp" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <script src="./support.js"></script>
 </head>
 <body>
@@ -42,7 +49,8 @@
 </style>
 <!-- HIDDEN: Light mode <script src="./theme.js"></script> -->
 <script src="./mobile-gate.js"></script>
-<script src="./intro.js?v=20261014"></script>
+<script src="./intro.js?v=20261016b"></script>
+<script src="./cards-fly.js?v=20261016b"></script>
 <script src="./cursor.js" defer=""></script>
 <script src="./sound.js" defer=""></script>
 <script src="./reveal.js"></script>
@@ -120,7 +128,7 @@
         </div>
       </div>
       <div data-tags="{{ c.i }}" style="position:absolute;right:clamp(22px,3vw,40px);bottom:calc(clamp(16px,2.4vh,40px) + 10px);font-family:'IBM Plex Mono',monospace;font-size:10.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#d6d2c9;text-align:right">{{ c.tags }}</div>
-      <div data-cap="{{ c.i }}" style="position:absolute;left:{{ c.capLeft }};top:{{ c.capTop }};display:flex;flex-direction:{{ c.capDir }};align-items:{{ c.capAlign }};gap:{{ c.capGap }};width:{{ c.capW }};min-width:130px;text-align:left">
+      <div data-cap="{{ c.i }}" style="position:absolute;left:{{ c.capLeft }};top:{{ c.capTop }};display:flex;flex-direction:{{ c.capDir }};align-items:{{ c.capAlign }};gap:{{ c.capGap }};width:{{ c.capW }};min-width:130px;box-sizing:border-box;text-align:left">
         <div style="display:flex;flex-direction:column;align-items:flex-start;gap:5px;flex:1;min-width:0">
         <h2 style="margin:0;font-family:Newsreader,Georgia,serif;font-weight:400;font-style:italic;font-size:clamp(21px,2.9vh,27px);line-height:1.05;letter-spacing:-.01em;color:#ffffff">{{ c.title }}</h2>
         <p style="margin:0;max-width:30ch;font-family:Newsreader,Georgia,serif;font-size:clamp(12.5px,1.8vh,14.5px);line-height:1.5;color:#e8e5de;text-wrap:pretty">{{ c.desc }}</p>
@@ -161,10 +169,10 @@
 <script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:900},&quot;showWorksCard&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Layout&quot;}}">
 class Component extends DCLogic {
   items = [
-    ["Docwize","Document workflow — app UI","2026","72%","calc(-50% - 20px)","9.5deg","docwize-cover-2026b.webp","Product Design, Design Systems","A B2B compliance platform for construction, with document signing built for corporate and legal teams.","docwize-slanted-2026.webp","light"],
-    ["Woz","AI mobile app builder — landing page","2025","27%","calc(-50% - 34px)","5deg","woz-cover-2026b.webp","Web Design, Framer","A B2B dashboard that lets businesses build and manage mobile apps with AI.","woz-hover-bg-2026.webp","light","$6M seed raise","After 3 months handling their decks, brand and logo revamp. ✦ Featured on Contra."],
+    ["Docwize","Document workflow — app UI","2026","74%","calc(-50% - 20px)","9.5deg","docwize-cover-2026b.webp","Product Design, Design Systems","A B2B compliance platform for construction, with document signing built for corporate and legal teams.","docwize-slanted-2026.webp","light"],
+    ["Woz","AI mobile app builder — landing page","2025","26%","calc(-50% - 34px)","5deg","woz-cover-2026b.webp","Web Design, Framer","A B2B dashboard that lets businesses build and manage mobile apps with AI.","woz-hover-bg-2026.webp","light","$6M seed raise","After 3 months handling their decks, brand and logo revamp. ✦ Featured on Contra."],
     ["Shadeform","GPU cloud marketplace — web app","2025","50%","calc(-50% + 40px)","-3.5deg","shadeform-cover-2026.webp","Product Design, Brand","A B2B GPU cloud marketplace that helps engineering teams compare, deploy and manage compute across providers."],
-    ["Tempo","Design-to-React IDE — core product","2024","3%","calc(-50% + 30px)","-7.5deg","tempo-cover-2026.webp","Product Design, Design Engineering","An AI visual IDE for building React apps, plus Agent+, a B2B service where Tempo’s team and AI ship features for companies.",undefined,undefined,"$5M seed raise","Backed by Webflow Ventures and YC, after 21 months as the sole designer across web, product and brand."],
+    ["Tempo","Design-to-React IDE — core product","2024","2%","calc(-50% + 30px)","-7.5deg","tempo-cover-2026.webp","Product Design, Design Engineering","An AI visual IDE for building React apps, plus Agent+, a B2B service where Tempo’s team and AI ship features for companies.",undefined,undefined,"$5M seed raise","Backed by Webflow Ventures and YC, after 21 months as the sole designer across web, product and brand."],
   ];
   loadShots = () => {
     const host = this.hostEl || document;
@@ -213,8 +221,14 @@ class Component extends DCLogic {
       if (bits.length > 160) bits.splice(0, bits.length-160);
       if (!c.width) size();
     });
+    var vis = true, lastF = 0;
+    if ('IntersectionObserver' in window) new IntersectionObserver(function(es){ vis = es[0].isIntersecting; }).observe(c);
     var loop = function(){
       self.raf = requestAnimationFrame(loop);
+      if (!vis) return;
+      var tf = performance.now();
+      if (!trail.length && !bits.length && tf - lastF < 33) return;
+      lastF = tf;
       var w = c.clientWidth, h = c.clientHeight;
       if (!w || !h) return;
       if (self.state && self.state.active !== null){
@@ -316,7 +330,7 @@ class Component extends DCLogic {
     this.onThm = (e) => this.setState({ light: e.detail.light });
     addEventListener("fp-sound-change", this.onSnd); addEventListener("fp-theme-change", this.onThm);
     setTimeout(() => this.setState({ soundOn: !!(window.fpSound && window.fpSound.isOn()), light: !!(window.fpTheme && window.fpTheme.isLight()) }), 0);
-    this.watTimer = setInterval(() => this.setState({ watTime: this.fmtWAT() }), 1000);
+    this.watTimer = setInterval(() => { const t = this.fmtWAT(); if (t !== this.state.watTime && !document.hidden) this.setState({ watTime: t }); }, 1000);
     if (!window.__fpCopyKey) { window.__fpCopyKey = 1; addEventListener("keydown", e => {
       if (e.metaKey || e.ctrlKey || e.altKey || e.repeat || (e.key || "").toLowerCase() !== "c") return;
       const t = e.target; if (t && (t.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName))) return;
@@ -368,7 +382,7 @@ class Component extends DCLogic {
     el.style.boxShadow = "0 40px 80px rgba(0,0,0,.6)";
     el.style.zIndex = 30;
     this.hovered = el;
-    this.setState({ active: idx, capTop: capTop, capLeft: capLeft, statDx: Math.round(er.right - rr.left - capLeft + 36), statDy: Math.round(er.top + er.height / 2 - rr.top - capTop) });
+    this.setState({ active: idx, capTop: capTop, capLeft: capLeft, capWpx: el.offsetWidth, statDx: Math.round(er.right - rr.left - capLeft + 36), statDy: Math.round(er.top + er.height / 2 - rr.top - capTop) });
   };
   reset(){
     const el = this.hovered;
@@ -405,7 +419,7 @@ class Component extends DCLogic {
     const cardMove = this.cardMove;
     const cards = this.items.map((it,i) => ({
       i, name: it[0], shot: it[1], year: it[2], left: it[3], top: it[4], rot: it[5], img: it[6],
-      tags: it[7], desc: it[8], bg: it[9] || it[6], stat: it[11], statNote: it[12], hasStat: !!it[11], title: i === 1 ? "Woz (YC W25)" : (i === 2 ? "Shadeform (YC S23)" : (i === 3 ? "Tempo (YC S23)" : it[0])), statPos: (i === 1 || i === 3) ? "absolute" : "static", statL: (i === 1 || i === 3) ? (this.state.statDx || 0) + "px" : "auto", statT: (i === 1 || i === 3) ? (this.state.statDy || 0) + "px" : "auto", statTf: (i === 1 || i === 3) ? "translateY(-50%)" : "none", statW: (i === 1 || i === 3) ? "clamp(220px,22vw,320px)" : "auto", capDir: "column", capAlign: "flex-start", capGap: "5px", capW: "23%", statMt: (i === 3 || i === 1) ? "0" : "clamp(6px,1.4vh,18px)", logo: "", video: "", noVideo: true, hv: ["docwize-card.mp4?v=20261012","woz-card-hover.mp4"][i] || "",
+      tags: it[7], desc: it[8], bg: it[9] || it[6], stat: it[11], statNote: it[12], hasStat: !!it[11], title: i === 1 ? "Woz (YC W25)" : (i === 2 ? "Shadeform (YC S23)" : (i === 3 ? "Tempo (YC S23)" : it[0])), statPos: (i === 1 || i === 3) ? "absolute" : "static", statL: (i === 1 || i === 3) ? (this.state.statDx || 0) + "px" : "auto", statT: (i === 1 || i === 3) ? (this.state.statDy || 0) + "px" : "auto", statTf: (i === 1 || i === 3) ? "translateY(-50%)" : "none", statW: (i === 1 || i === 3) ? "clamp(220px,22vw,320px)" : "auto", capDir: "column", capAlign: "flex-start", capGap: "5px", capW: this.state.capWpx ? this.state.capWpx + "px" : "23%", statMt: (i === 3 || i === 1) ? "0" : "clamp(6px,1.4vh,18px)", logo: "", video: "", noVideo: true, hv: ["docwize-card.mp4?v=20261012","woz-card-hover.mp4"][i] || "",
       href: i === 0 ? "docwize.html" : (i === 1 ? "woz.html" : "#work"),
       imgScale: "none",
       capTop: (this.state.capTop || 0) + "px",

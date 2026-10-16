@@ -14,8 +14,8 @@
     "#fp-intro.in img,#fp-intro.in .l{opacity:1;transform:none}" +
     "#fp-intro.out img,#fp-intro.out .l{opacity:1;transform:translateY(-120%);transition:transform .45s cubic-bezier(.7,0,.3,1)}" +
     "#fp-intro.lift .c{transform:translateY(-101%)}" +
-    "html.fp-intro-run main{filter:blur(14px);opacity:.4;transform:scale(1.02)}" +
-    "html.fp-intro-done main{transition:filter .9s ease,opacity .9s ease,transform 1.1s cubic-bezier(.2,.8,.2,1)}";
+    "html.fp-intro-run main{opacity:.4;transform:scale(1.02)}" +
+    "html.fp-intro-done main{transition:opacity .7s ease,transform .9s cubic-bezier(.2,.8,.2,1)}";
   d.head ? d.head.appendChild(css) : d.documentElement.appendChild(css);
   var root = d.createElement("div"); root.id = "fp-intro"; root.setAttribute("aria-hidden", "true");
   for (var i = 0; i < COLS; i++) {
