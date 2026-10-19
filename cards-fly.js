@@ -51,9 +51,8 @@
         .set(k.c, { zIndex: --zLow }, at + .2)
         .to(k.c, { y: k.dy, x: k.dx, rotation: -2 + side, duration: .22, ease: "power2.inOut" }, at + .2);
     }
-    cards.forEach(function(k, i){ cut(.55 + i * .16, k, i % 2 ? 1 : -1); });
-    cards.slice().reverse().forEach(function(k, i){ cut(1.25 + i * .14, k, i % 2 ? -1 : 1); });
-    var dealAt = 1.95;
+    cards.slice().reverse().forEach(function(k, i){ cut(.55 + i * .14, k, i % 2 ? -1 : 1); });
+    var dealAt = 1.25;
     cards.forEach(function(k, i){
       var at = dealAt + i * .12;
       tl.set(k.c, { zIndex: 50 + i, boxShadow: "0 18px 44px rgba(0,0,0,.6)" }, at)
